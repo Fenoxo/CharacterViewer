@@ -4,104 +4,149 @@
 	import flash.events.MouseEvent;
 	import flash.events.Event;
 	import fl.controls.ComboBox;
+	import fl.controls.List;
+	import fl.controls.listClasses.CellRenderer;
 	import fl.data.DataProvider;
 	import flash.text.TextFormat;
+	import flash.ui.Mouse;
+	import classes.DIC_Data;
 	
 	public class DIC_Dropdown extends ComboBox{
-		public var action:Function;
+		public var styl:Object;
 		public var data:Array = [];
+		private var action:Function;
 		private var CoC_Styles:Object = {
-			listSkin: "CoC_List_skin",
-			upSkin: "CoC_ComboBox_upSkin",
-			downSkin: "CoC_ComboBox_downSkin",
-			overSkin: "CoC_ComboBox_overSkin",
-			thumbUpSkin: "CoC_ScrollThumb_upSkin",
-    		thumbDownSkin: "CoC_ScrollThumb_downSkin",
-    		thumbOverSkin: "CoC_ScrollThumb_overSkin", 
-    		trackUpSkin: "CoC_ScrollTrack_skin",
-			trackDownSkin: "CoC_ScrollTrack_skin",
-			trackOverSkin: "CoC_ScrollTrack_skin",
-    		upArrowUpSkin: "CoC_ScrollArrowUp_upSkin",
-			upArrowDownSkin: "CoC_ScrollArrowUp_downSkin",
-			upArrowOverSkin: "CoC_ScrollArrowUp_overSkin",
-    		downArrowUpSkin: "CoC_ScrollArrowDown_upSkin",
-			downArrowDownSkin: "CoC_ScrollArrowDown_overSkin",
-			downArrowOverSkin: "CoC_ScrollArrowDown_downSkin",
+			buttonWidth: 0,
+			focusRectSkin: null,
+			listSkin: CoC_List_skin,
+			skin: CoC_List_skin,
+			cellRenderer: CoC_CellRenderer,
+			
+			upSkin: CoC_ComboBox_upSkin,
+			downSkin: CoC_ComboBox_downSkin,
+			overSkin: CoC_ComboBox_overSkin,
 			disabledSkin: null,
-			thumbIcon: null,
+			
+			trackUpSkin: null,
+			trackOverSkin: null,
+    		trackDownSkin: null,
 			trackDisabledSkin: null,
+			
+			thumbIcon: null,
+			thumbArrowUpSkin: CoC_CB_ScrollThumb_upSkin,
+    		thumbUpSkin: CoC_CB_ScrollThumb_upSkin,
+    		thumbOverSkin: CoC_CB_ScrollThumb_overSkin, 
+			thumbDownSkin: CoC_CB_ScrollThumb_downSkin,
+    		thumbDisabledSkin: null,
+			
+    		upArrowUpSkin: CoC_CB_ScrollArrowUp_upSkin,
+			upArrowOverSkin: CoC_CB_ScrollArrowUp_overSkin,
+    		upArrowDownSkin: CoC_CB_ScrollArrowUp_downSkin,
 			upArrowDisabledSkin: null,
+			
+			downArrowUpSkin: CoC_CB_ScrollArrowDown_upSkin,
+			downArrowDownSkin: CoC_CB_ScrollArrowDown_overSkin,
+			downArrowOverSkin: CoC_CB_ScrollArrowDown_downSkin,
 			downArrowDisabledSkin: null
     	}
 		private var TiTS_Styles:Object = {
-			listSkin: "TiTS_List_skin",
-			upSkin: "TiTS_ComboBox_upSkin",
-			downSkin: "TiTS_ComboBox_downSkin",
-			overSkin: "TiTS_ComboBox_overSkin",
-			thumbUpSkin: "TiTS_ComboBox_ScrollThumb",
-    		thumbDownSkin: "TiTS_ComboBox_ScrollThumb",
-    		thumbOverSkin: "TiTS_ComboBox_ScrollThumb",
+			buttonWidth: 6,
+			focusRectSkin: null,
+			listSkin: TiTS_List_skin,
+			skin: TiTS_List_skin,
+			cellRenderer: TiTS_CellRenderer,
+			
+			upSkin: TiTS_ComboBox_upSkin,
+			downSkin: TiTS_ComboBox_downSkin,
+			overSkin: TiTS_ComboBox_overSkin,
 			disabledSkin: null,
+			
 			thumbIcon: null,
+			thumbArrowUpSkin: TiTS_CB_ScrollThumb,
+			
+    		thumbUpSkin: TiTS_CB_ScrollThumb,
+    		thumbDownSkin: TiTS_CB_ScrollThumb,
+    		thumbOverSkin: TiTS_CB_ScrollThumb,
+			thumbDisabledSkin: null,
+			
 			trackUpSkin: null,
 			trackDownSkin: null,
 			trackOverSkin: null,
+			trackDisabledSkin: null,
+			
     		upArrowUpSkin: null,
 			upArrowDownSkin: null,
 			upArrowOverSkin: null,
+			upArrowDisabledSkin: null,
+			
     		downArrowUpSkin: null,
 			downArrowDownSkin: null,
 			downArrowOverSkin: null,
-    		trackDisabledSkin: null,
-			upArrowDisabledSkin: null,
-			downArrowDisabledSkin: null
-    	}
-		public function DIC_Dropdown(_name:String,_prompt:String,_x:Number,_y:Number, _data:Object,_action:Function, isTiTS:Boolean){
+			downArrowDisabledSkin: null//null
+		}
+		public function DIC_Dropdown(_name:String,_prompt:String,_y:Number, _data:Object,_action:Function){
+			var isTiTS:Boolean = DIC_Data.isTiTS;
 			for (var key in _data){
-				data.push({label:toCap(key), data:_data[key]});
+				data.push({label:key.substr(0,1).toUpperCase() + key.substr(1), data:_data[key]});
 			}
-			if(data.length < 2){
+			if(data.length < 3){
 				this.visible = false;
 				return;
 			}
+			var mod = int(isTiTS);
+			this.styl = [CoC_Styles, TiTS_Styles][mod];
+			for (key in styl){
+				if (styl[key] == null) styl[key] = Inexistant;
+				this.setStyle(key, styl[key]);
+			}
 			data.sortOn("label");
-			this.name = _name;
-			this.action = _action;
-			this.prompt = _prompt;
-			this.x = _x;
-			this.y = _y;
+			this.x = 30;
+			this.y = _y-18;
 			this.height = 36;
 			this.width = 140;
-			this._rowCount = 8;
-			this.textField.width = 140;
-			this.getChildAt(0).buttonMode = true;
-			this.dropdownWidth = 160;
+			this.name = _name;
+			this._rowCount = 6;
+			this.dropdown.rowHeight = 30;
+			this.action = _action;
+			this.prompt = _prompt;
+			this.cacheAsBitmap = true;
 			this.dataProvider = new DataProvider(data);
-			this.addEventListener(Event.CHANGE, effect);
-			trace("New CoC_Dropdown with data length of "+data.length+".");
+			this.textField.setStyle("textPadding", [3, 1][mod]);
+			this.dropdown.setStyle("contentPadding", [5, 0][mod]);
+			this.dropdown.setStyle("cellRenderer", [CoC_CellRenderer, TiTS_CellRenderer][mod]);
 			
-			if (isTiTS){
-				this.dropdown.setRendererStyle("upSkin", "TiTS_CellRenderer_upSkin")
-				this.dropdown.setRendererStyle("overSkin", "TiTS_CellRenderer_downSkin")
-				this.dropdown.setRendererStyle("downSkin", "TiTS_CellRenderer_downSkin")
-				this.dropdown.setRendererStyle("disabledSkin", "Inexistant")
-				this.dropdown.setRendererStyle("selectedUpSkin", "TiTS_CellRenderer_downSkin")
-				this.dropdown.setRendererStyle("selectedOverSkin", "TiTS_CellRenderer_downSkin")
-				this.dropdown.setRendererStyle("selectedDownSkin", "TiTS_CellRenderer_downSkin")
-				this.dropdown.setRendererStyle("selectedDisabledSkin", "Inexistant")
+			
+			if(data.length > this._rowCount){
+				this.dropdownWidth = [160, 155][mod];
+			}else{
+				this.dropdownWidth = 140;
 			}
 			
-			var nam:String;
-			for (key in CoC_Styles){
-				nam = [CoC_Styles, TiTS_Styles][int(isTiTS)][key];
-				if (!nam) nam = "Inexistant";
-				this.setStyle(key, nam);
-			}
-			function effect(event:Event){
+			
+			/*var obj:Object = ComboBox.getStyleDefinition();
+			for (key in obj){
+				trace(key+": "+obj[key]+",");
+				trace(this.getStyle(key));
+			}*/
+			
+			addEventListener(Event.CHANGE, onChange);
+			addEventListener(Event.REMOVED_FROM_STAGE, onRemove);
+			addEventListener(MouseEvent.MOUSE_OVER, onOver);
+			addEventListener(MouseEvent.MOUSE_OUT, onOut);
+			function onChange(event:Event):void{
 				action(ComboBox(event.target).selectedItem.data)
 			}
-			function toCap(str:String):String{
-				return str.substr(0,1).toUpperCase() + str.substr(1); 
+			function onRemove(event:Event):void{
+				removeEventListener(Event.CHANGE, onChange);
+				removeEventListener(Event.REMOVED_FROM_STAGE, onRemove);
+				removeEventListener(MouseEvent.MOUSE_OVER, onOver);
+				removeEventListener(MouseEvent.MOUSE_OUT, onOut);
+			}
+			function onOver(event:MouseEvent):void{
+				Mouse.cursor="button";
+			}
+			function onOut(event:MouseEvent):void{
+				Mouse.cursor="auto";
 			}
 		}
 	}

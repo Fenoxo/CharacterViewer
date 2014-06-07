@@ -4,12 +4,15 @@
 	import flash.geom.Rectangle;
 	import fl.controls.TextArea;
 	import flash.text.TextField;
+	import classes.DIC_Data;
 
 	public class DIC_Button extends MovieClip{
 		public var action:Function;
+		public var direct:Boolean;
 		public var addit1;
 		public var addit2;
-		public function DIC_Button(_name:String, _x:int, _y:int, _text:String, _action:Function, isTiTS = false, _enabled:Boolean=true, _addit1:*=undefined, _addit2:*=undefined, _width = 140){
+		public function DIC_Button(_name:String, _x:int, _y:int, _text:String, _action:Function, _enabled:Boolean=true, _addit1:*=undefined, _addit2:*=undefined, _width = 140, _direct:Boolean = false){
+			var isTiTS:Boolean = DIC_Data.isTiTS;
 			this.x = _x;
 			this.y = _y;
 			this.gotoAndStop(int(isTiTS)+1);
@@ -19,17 +22,25 @@
 			this.addit1 = _addit1;
 			this.addit2 = _addit2;
 			this.text.text = _text;
+			this.cacheAsBitmap = true;
 			if (!_enabled) this.MC.gotoAndStop(3);
 			
 			this.buttonMode = true;
 			this.mouseChildren = false;
 			this.enabled = _enabled;
+			this.tabEnabled = _enabled;
+			
+			this.direct = _direct;
+			if (direct)
+			this.addEventListener(MouseEvent.CLICK, this.action);
 		}
 		public function lock():void{
+			this.tabEnabled = false;
 			this.enabled = false;
 			this.MC.gotoAndStop(3);
 		}
 		public function unLock():void{
+			this.tabEnabled = true;
 			this.enabled = true;
 			this.MC.gotoAndStop(1);
 		}

@@ -1,54 +1,125 @@
 //Dormant
-	real clothes system
 	load game from text
+	load game from .sol
 //Art
-	ass+legs
+	real clothes system
 	kitsune
-
-//Weak priority
-	better balls scaling
-	better ears cycling
-	slider + selector to load Menu
-//Details
-	foe loading
-	more than 10 crews
-	crew-> NPC
 	tail shading
-	cycling boobs keep nip size
-	half space between buttons
-	TiTS menu groups separator
-	random addDick order
-//Redo
-	coc dropdown box
-//Défit
-	find a way for scrollbars to reach bottom
-	mask dropdown box
-	toggle buttons
-	cocks artifacts
-//Parts
-	//Boobs
-		flat
-	//Boobs shadow	
-		masking
-			a mask per bodytype, home made
-			use the actual body
-		adding
-			intertwined into breast layers
-		cycling
-			cycle top shadow and bottom one
-			make cycle check if part exist before.
-	//Face
-		furry lips
-//Tits
-	combobox
-		cell renderer?
-		list properties?
-		scrollbar
-	cow tail???
-	fix aphotic blue black
-	hips
-	
+	skin types
+	convert assets to bitmap
+//Code
+	optimize /w scrollrect
+	rewrite maximum cycle int or something
+	reduce 100 for cocks and boobies
 //Done
+fixing missing heads
+fixed cycling boobs error message
+-Sending build to fenfen
+AMBIANT LIGHTING
+TiTS DICTIONARY
+ADDED BACKGROUND FOR TiTS
+removed useless DIC_DATA singleton
+replace flashmode by GUIMode
+fixed white text when switching to no-save-CoC
+taller goblins
+fixed NPC part dragging
+creatures hand click
+NEW DICTIONARY SYSTEM
+mouse enabled hero
+FIXED BOOB SHADOWS
+fixed loader text
+fixed chrome loader
+fixed crash when no save
+drastically reduced font sizes
+added loading screen, yay! (still starts at 30%, butt fuck it).
+fixed tits panels
+fixed focus (thank god)
+added singleton to hold focus array, and flash mode
+added message in case fullscreen blocked
+fixed fullscreen not working
+temp fix for drop outside
+finally fixed mouseleave
+fixed mouseleave event
+tons of scrollbar fixes, that has been waiting for too long
+giant balls (up to 25in) not very pretty, but much more than before
+fixed snapinterval fucking up text
+fixed no snapinterval for cocks and boobs
+fixed dropping creature outside zone keeping drag
+fixed creature deletion, now powerful getbound system.
+fixed annoying dropdown crash, and cleaned up styles.
+NPC spawning pos more intelligent
+fixed NPC tonote reset
+fixed panels taking useless memory
+gave stated to picker buttons
+made picker have the right color since the beginning
+added text to color picker
+added coc styles to cpickers
+mastered colorpickers styles
+fixed y for dropdown and colorpicker
+fixed mouse giving focus
+removed focusrect for more elements
+added colorPicker
+removed rectskin from dropdown
+added complete focus support. no ugly focusrect, just plain ol glowfilter goodness
+remove useles types
+fixed weird glitchy tall slider text
+fixed sidearrow placement
+changed default hair color to grey
+made tits bar better
+npc menu crash
+better tonote automatic scroll down
+fixed scrollbar crash and cellrenderers
+fixed slider over crash
+better boob slider entry
+fixed one-entry dropdown being displayed
+fixed single cock/boob crash
+fixed charcap masking
+added body cycle bodyghost
+added basic boobshade drawing
+added basic bodyshade cycle
+fixed a bug that gave the wrong shade indexes
+made body contain his own shade, to avoid further index issue
+fixed wrong hair index
+fixed first boob row not being shaded
+made basic body shadow adding
+made cycle transmit mask
+added boob shadow type array
+fixed a most of breasts being broken
+replaced the overly complicated string system for coloring, with a much more powerful code system.
+fixed female leg body connection
+fixed foe menu not showing more than 10 chars
+deleted default scrollbar types
+added states to tits scrollbar
+added clearAll to foe and NPCs
+better cock randomizer
+added fancy index setting: you can pass through multiple children if you don't touch them
+added mousewheel index setting
+removed doubleClick remove from charactersParent
+fixed mainParent not appearing
+NPCParent -> charactersParent
+mainParent now part of NPCParent, for index purpose
+fixed only foe being you (man that was a deep bug)
+made scrollable lists keep track of what was added, and not, and support multiple selection
+added scrollable NPC list, supporting theoretically infinite amount of NPCs
+added . to a few toNotes
+fixed not being able to drop chars on sidebars
+added foe loading
+replaced CREW by NPC
+addCocks now add them at random order;
+more and more combobox tweakings
+removed style track to use a part of the DIC_Slider thingy, because I grew tired of that shit. We now have a real min and max
+added on remove to slider
+set snap interval to slide on smaller intervals
+nipple reduce when boob grow, but not when boob shrink
+fixed double nipple when activating nipple size transmission, nipple now transmite when cycling breast
+slightly better ball scaling
+made ear autoCycle to fit hair
+made scrollbar fit into bg
+reduced cocks>3 artifacts
+reworked main scrollbar, lee glitchy
+finished both dropdow, custom scrollbars, basically perfect.
+completely redone both dropdown boxes, and their classes. Fixed a whole lot of glitches and ugly stuff.
+fixed shuffle eyes after cycling
 fixed phantom face for malehumanhead
 i think this made me physically ill.
 5 HOURS RETRYING THE SAME BULLSHIT I DID BEFORE BUT GOOD.

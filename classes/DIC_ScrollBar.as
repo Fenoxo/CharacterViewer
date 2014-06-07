@@ -2,47 +2,58 @@
 	import flash.utils.getDefinitionByName;
 	import flash.display.MovieClip;
 	import fl.controls.UIScrollBar;
+	import classes.DIC_Data;
 	
 	public class DIC_ScrollBar extends UIScrollBar{
 		private var CoC_Styles:Object = {
-			thumbUpSkin: "CoC_ScrollThumb_upSkin",
-    		thumbOverSkin: "CoC_ScrollThumb_overSkin", 
-    		thumbDownSkin: "CoC_ScrollThumb_downSkin",
-    		trackUpSkin: "CoC_ScrollTrack_skin",
-			trackDownSkin: "CoC_ScrollTrack_skin",
-			trackOverSkin: "CoC_ScrollTrack_skin",
-    		upArrowUpSkin: "CoC_ScrollArrowUp_upSkin",
-			upArrowDownSkin: "CoC_ScrollArrowUp_downSkin",
-			upArrowOverSkin: "CoC_ScrollArrowUp_overSkin",
-    		downArrowUpSkin: "CoC_ScrollArrowDown_upSkin",
-			downArrowOverSkin: "CoC_ScrollArrowDown_downSkin",
-    		downArrowDownSkin: "CoC_ScrollArrowDown_overSkin",
+			focusRectSkin: null,
 			thumbIcon: null,
-			trackDisabledSkin: null,
-			upArrowDisabledSkin: null,
+			thumbUpSkin: "CoC_ScrollThumb",
+    		thumbOverSkin: "CoC_ScrollThumb",
+    		thumbDownSkin: "CoC_ScrollThumb",
+			thumbDisabledSkin: null,
+			
+    		trackDisabledSkin: null,
+			trackUpSkin: "CoC_ScrollTrack",
+			trackDownSkin: "CoC_ScrollTrack",
+			trackOverSkin: "CoC_ScrollTrack",
+			
+    		upArrowUpSkin: "CoC_ScrollArrowUp",
+			upArrowDownSkin: "CoC_ScrollArrowUp",
+			upArrowOverSkin: "CoC_ScrollArrowUp",
+    		upArrowDisabledSkin: null,
+			
+			downArrowUpSkin: "CoC_ScrollArrowDown",
+			downArrowOverSkin: "CoC_ScrollArrowDown",
+    		downArrowDownSkin: "CoC_ScrollArrowDown",
 			downArrowDisabledSkin: null
     	}
 		private var TiTS_Styles:Object = {
-    		thumbUpSkin: "TiTS_ScrollThumb",
-    		thumbOverSkin: "TiTS_ScrollThumb", 
-    		thumbDownSkin: "TiTS_ScrollThumb",
-    		trackUpSkin: "TiTS_ScrollTrack_skin",
-			trackDownSkin: "TiTS_ScrollTrack_skin",
-			trackOverSkin: "TiTS_ScrollTrack_skin",
-    		trackDisabledSkin: null,
+			focusRectSkin: null,
 			thumbIcon: null,
+			thumbUpSkin: "TiTS_ScrollThumb_upSkin",
+    		thumbOverSkin: "TiTS_ScrollThumb_downSkin", 
+    		thumbDownSkin: "TiTS_ScrollThumb_downSkin",
+			thumbDisabledSkin: null,
+			
+    		trackUpSkin: "TiTS_ScrollTrack",
+			trackDownSkin: "TiTS_ScrollTrack",
+			trackOverSkin: "TiTS_ScrollTrack",
+    		trackDisabledSkin: null,
+			
 			upArrowUpSkin: null,
 			upArrowDownSkin: null,
 			upArrowOverSkin: null,
     		upArrowDisabledSkin: null,
+			
 			downArrowUpSkin: null,
 			downArrowDownSkin: null,
 			downArrowOverSkin: null,
     		downArrowDisabledSkin: null
 			
     	}
-		public function DIC_ScrollBar(isTiTS:Boolean = false){
-			switchMode(isTiTS);
+		public function DIC_ScrollBar(){
+			switchMode(DIC_Data.isTiTS);
 		}
 		public function switchMode(isTiTS:Boolean){
 			var styl;
