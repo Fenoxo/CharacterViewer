@@ -22,7 +22,7 @@ package classes.utils
 			var G:Number = 0;
 			var B:Number = 0;
 			
-			for (var i:int = 0; i < 100; i++)//!!!
+			for (var i:int = 0; i < 100; i++)
 			{
 				var x:int = 200.5 + 12.240 * i;
 				var y:int = 0.5 + 98.0 * (i % 10 + 0.5);

@@ -34,7 +34,7 @@ public function loadFromDefault():void
  * Loads a CoC character given its id.
  * @param	id
  */
-public function loadFromCoCSave(id:int)
+public function loadFromCoCSave(id:int):void
 {
 	var saveData:Object = CoCSaves[id];
 	
@@ -53,7 +53,7 @@ public function loadFromCoCSave(id:int)
  * Loads a TiTS character given its id.
  * @param	id
  */
-public function loadFromTiTSSave(id:int)
+public function loadFromTiTSSave(id:int):void
 {
 	var saveData:Object = TiTSSaves[id];
 	
@@ -77,17 +77,29 @@ public function loadFromTiTSSave(id:int)
  */
 public function loadTiTSSecondaries(save:Object):void
 {
-	for each (var ite:Object in save.characters)
+	for each (var item:Object in save.characters)
 	{
-		if (ite.legFlags && (ite.legFlags.indexOf(17) != -1 || ite.legFlags.indexOf(16) != -1))
+		if (isCharacterSaveValid(item))
 		{
-			NPCData[ite.short] = ite;
+			NPCData[item.short] = item;
 		}
 	}
-	for each (ite in save.foes)
+	for each (item in save.foes)
 	{
-		foeData[ite.short] = ite;//!!!
+		if (isCharacterSaveValid(item))
+		{
+			foeData[item.short] = item;
+		}
 	}
+}
+
+public function isCharacterSaveValid(save:Object):Boolean
+{
+	if (ite.legFlags && (ite.legFlags.indexOf(17) != -1 || ite.legFlags.indexOf(16) != -1))
+	{
+		return (true);
+	}
+	return (false);
 }
 
 /**

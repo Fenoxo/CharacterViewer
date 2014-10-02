@@ -37,7 +37,7 @@
 			else
 			{
 				part = new partClass();
-				//part.cacheAsBitmap = true;//!!!
+				part.cacheAsBitmap = true;//!!!
 				createdPartsCounter++;
 				
 				if ("MC" in part)

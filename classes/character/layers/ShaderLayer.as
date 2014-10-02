@@ -122,7 +122,7 @@
 				activeTimeout = setTimeout(onTimeout, 1);
 			}
 			visible = true;
-			cacheAsBitmap = true;//!!!
+			cacheAsBitmap = true;
 			parent.cacheAsBitmap = true;
 		}
 		

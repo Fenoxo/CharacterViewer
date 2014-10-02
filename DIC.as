@@ -21,11 +21,7 @@
 	import flash.events.FocusEvent;
 	import flash.events.MouseEvent;
 	import flash.events.Event;
-	import flash.text.AntiAliasType;//!!!
-	import flash.text.TextFormat;//!!!
-	import flash.text.TextField;
-	import flash.text.Font;//!!!
-	import flash.geom.ColorTransform;//!!!
+	import flash.geom.ColorTransform;
 	import flash.geom.Rectangle;
 	import flash.geom.Matrix;
 	import flash.geom.Point;

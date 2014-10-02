@@ -101,7 +101,7 @@ public function changeBackground(backgroundID:int):void
 	
 	backgroundBitmap.bitmapData = backgrounds[backgroundID];
 	
-	var ct:ColorTransform = BitmapUtils.getBitmapAverageDeviation(backgrounds[backgroundID], backgroundID);//!!!
+	var ct:ColorTransform = BitmapUtils.getBitmapAverageDeviation(backgrounds[backgroundID], backgroundID);
 	charactersParent.transform.colorTransform = ct;
 	creaturesParent.transform.colorTransform = ct;
 }
@@ -500,7 +500,7 @@ public function parseMenu(menuObject:Object, isTiTS:Boolean):Sprite
 				addComponent(16, y, new ViewerArrows(info[2], info[1], info[3], info[4], info[5]));
 			break;
 			case "slider"://Slider element
-				addComponent(26, y, new ViewerSlider(info[1], 0.0, 1.0, info[2], info[3]));//!!!
+				addComponent(26, y, new ViewerSlider(info[1], 0.0, 1.0, info[2], info[3]));
 			break;
 			case "select"://Dropdown box element
 				addComponent(30, y, new ViewerSelect(info[1], info[2], info[3], info[4]));

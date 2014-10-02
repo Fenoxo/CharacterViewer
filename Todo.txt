@@ -6,13 +6,13 @@
 			parent changing?
 			blendshader?
 	//Implement
-	C	add horsecocks
 	C	add dogecocks
 	//Verify
 	C	update heightmod and tallness same time?
+			is heightmod used after finished drawing?
 	C	TiTS breasts rating
 	//Color
-	C	retrieve shader source
+	C	find/redo shader source
 //Annoying
 	lag when dragging lotsa characters.
 //Dangerous code
@@ -92,6 +92,12 @@
 	chain menu opening thingy?
 	reshade only part of shading
 //Done
+	changed tits NPC loading to a cleaner version
+	removed old //!!!
+	removed debug traces
+	put back cache as bitmap.
+	removed useless imports
+	seperated layers to allow invisibles
 	now uses GSkinner color matrix class.
 	set tallness slider minimum to 4 instead of basic tallness
 	changed every tail to work behing goo bodies.

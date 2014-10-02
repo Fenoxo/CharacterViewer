@@ -399,12 +399,10 @@
 				if (boob.hitTestPoint(point.x, point.y, true))
 				{
 					index = getChildIndex(boob);
-					trace("index gotten");
 				}
 			}
 			var cockParent:MovieClip = painter.getPart("cockParent");
 			
-			trace(numChildren, numChildren);
 			setChildIndex(cockParent, index);
 		}
 		
