@@ -1,0 +1,22 @@
+{
+	"ears": {"SF":"fillbg", "SS":"shading"},
+	"head": {"SF":"fillbg", "SS":"shading"},
+	"arms": {"SF":"fillbg", "SS":"shading"},
+	"hand": {"SF":"fillbg", "SS":"shading"},
+	"body": {"SF":"fillbg", "SS":"shading"},
+	"hips": {"SF":"fillbg", "SS":"shading"},
+	"legs": {"SF":"fillbg", "SS":"shading"},
+	"face": {"SF":"fillbg", "SS":"shading", "BF":"lips", "BS":"lipsShading", "EF":"pupils"},
+	"cock": {"SF":"fillbg", "SS":"shading", "BF":"headFill", "BS":"headShade"},
+	"clit": {"BF":"fillbg", "BS":"shading", "SS":"skin"},
+	"tail": {"SF":"skinbg", "HF":"hairbg"},
+	"hair": {"HF":"hairbg", "HS":"shading"},
+	"boobs": {"SF":"fillbg", "SS":"shading", "BF":"areola", "BS":"areolaShading"},
+	"nipple": {"BF":"fillbg", "BS":"shading"},
+	"balls": {"SF":"fillbg", "SS":"shading"},
+	"ballsMC": {"SF":"fillbg", "SS":"shading"},
+	"butt": {"SS":"shading"},
+	"vag": {"SS":"shading"},
+	"shade": {},
+	"parent": {}
+}

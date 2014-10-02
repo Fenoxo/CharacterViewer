@@ -1,0 +1,1606 @@
+{
+	"vag": {
+		"0": {
+			"0": {
+				"0": "NoFemaleVag"
+			},
+			"1": {
+				"0": "NoMaleVag"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "FemaleVag"
+			},
+			"1": {
+				"0": "MaleVag"
+			}
+		}
+	},
+	"arms": {
+		"0": {
+			"0": {
+				"0": "NormalArmHigh"
+			},
+			"1": {
+				"0": "NormalArmLow"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "HarpyArmHigh"
+			},
+			"1": {
+				"0": "HarpyArmLow"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "SpiderArmHigh"
+			},
+			"1": {
+				"0": "SpiderArmLow"
+			}
+		}
+	},
+	"hair": {
+		"0": {
+			"0": {
+				"0": "BaldNormalHair",
+				"1": "BaldNormalHairBack"
+			},
+			"1": {
+				"0": "BaldFeatheredHair",
+				"1": "BaldFeatheredHairBack"
+			},
+			"2": {
+				"0": "BaldGhostHair",
+				"1": "BaldGhostHairBack"
+			},
+			"3": {
+				"0": "BaldGooHair",
+				"1": "BaldGooHairBack"
+			},
+			"4": {
+				"0": "BaldAnemoneHair",
+				"1": "BaldAnemoneHairBack"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "ReallyShortNormalHair",
+				"1": "ReallyShortNormalHairBack"
+			},
+			"1": {
+				"0": "ReallyShortFeatheredHair",
+				"1": "ReallyShortFeatheredHairBack"
+			},
+			"2": {
+				"0": "ReallyShortGhostHair",
+				"1": "ReallyShortGhostHairBack"
+			},
+			"3": {
+				"0": "ReallyShortGooHair",
+				"1": "ReallyShortGooHairBack"
+			},
+			"4": {
+				"0": "ReallyShortAnemoneHair",
+				"1": "ReallyShortAnemoneHairBack"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "ShortNormalHair",
+				"1": "ShortNormalHairBack"
+			},
+			"1": {
+				"0": "ShortFeatheredHair",
+				"1": "ShortFeatheredHairBack"
+			},
+			"2": {
+				"0": "ShortGhostHair",
+				"1": "ShortGhostHairBack"
+			},
+			"3": {
+				"0": "ShortGooHair",
+				"1": "ShortGooHairBack"
+			},
+			"4": {
+				"0": "ShortAnemoneHair",
+				"1": "ShortAnemoneHairBack"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "MediumNormalHair",
+				"1": "MediumNormalHairBack"
+			},
+			"1": {
+				"0": "MediumFeatheredHair",
+				"1": "MediumFeatheredHairBack"
+			},
+			"2": {
+				"0": "MediumGhostHair",
+				"1": "MediumGhostHairBack"
+			},
+			"3": {
+				"0": "MediumGooHair",
+				"1": "MediumGooHairBack"
+			},
+			"4": {
+				"0": "MediumAnemoneHair",
+				"1": "MediumAnemoneHairBack"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "LongNormalHair",
+				"1": "LongNormalHairBack"
+			},
+			"1": {
+				"0": "LongFeatheredHair",
+				"1": "LongFeatheredHairBack"
+			},
+			"2": {
+				"0": "LongGhostHair",
+				"1": "LongGhostHairBack"
+			},
+			"3": {
+				"0": "LongGooHair",
+				"1": "LongGooHairBack"
+			},
+			"4": {
+				"0": "LongAnemoneHair",
+				"1": "LongAnemoneHairBack"
+			}
+		}
+	},
+	"legs": {
+		"0": {
+			"0": {
+				"0": "FemaleHumanLegs"
+			},
+			"1": {
+				"0": "FemaleCowLegs"
+			},
+			"2": {
+				"0": "FemaleWolfPaws"
+			},
+			"3": {
+				"0": "FemaleNagaTail"
+			},
+			"4": {
+				"0": "FemaleCentaur"
+			},
+			"5": {
+				"0": "FemaleDemonicHeels"
+			},
+			"6": {
+				"0": "FemaleDemonFootClaws"
+			},
+			"7": {
+				"0": "FemaleBeeLegs"
+			},
+			"8": {
+				"0": "FemaleGooMound"
+			},
+			"9": {
+				"0": "FemaleCatPaws"
+			},
+			"10": {
+				"0": "FemaleLizardClaws"
+			},
+			"11": {
+				"0": "FemaleMLP"
+			},
+			"12": {
+				"0": "FemaleBunnyFeet"
+			},
+			"13": {
+				"0": "FemaleHarpyLegs"
+			},
+			"14": {
+				"0": "FemaleKangarooFeet"
+			},
+			"15": {
+				"0": "FemaleSpiderLegs"
+			},
+			"16": {
+				"0": "FemaleDriderLeg"
+			},
+			"17": {
+				"0": "FemaleFoxPaws"
+			},
+			"18": {
+				"0": "FemaleDragonClaws"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "MaleHumanLegs"
+			},
+			"1": {
+				"0": "MaleCowLegs"
+			},
+			"2": {
+				"0": "MaleWolfPaws"
+			},
+			"3": {
+				"0": "MaleNagaTail"
+			},
+			"4": {
+				"0": "MaleCentaur"
+			},
+			"5": {
+				"0": "MaleDemonicHeels"
+			},
+			"6": {
+				"0": "MaleDemonFootClaws"
+			},
+			"7": {
+				"0": "MaleBeeLegs"
+			},
+			"8": {
+				"0": "MaleGooMound"
+			},
+			"9": {
+				"0": "MaleCatPaws"
+			},
+			"10": {
+				"0": "MaleLizardClaws"
+			},
+			"11": {
+				"0": "MaleMLP"
+			},
+			"12": {
+				"0": "MaleBunnyFeet"
+			},
+			"13": {
+				"0": "MaleHarpyLegs"
+			},
+			"14": {
+				"0": "MaleKangarooFeet"
+			},
+			"15": {
+				"0": "MaleSpiderLegs"
+			},
+			"16": {
+				"0": "MaleDriderLeg"
+			},
+			"17": {
+				"0": "MaleFoxPaws"
+			},
+			"18": {
+				"0": "MaleDragonClaws"
+			}
+		}
+	},
+	"face": {
+		"0": {
+			"0": {
+				"0": "NormalFemaleHumanFace",
+				"1": "NormalFemaleHorseFace",
+				"2": "NormalFemaleDogFace",
+				"3": "NormalFemaleCowFace",
+				"4": "NormalFemaleSharkFace",
+				"5": "NormalFemaleNagaFace",
+				"6": "NormalFemaleCatFace",
+				"7": "NormalFemaleLizardFace",
+				"8": "NormalFemaleBunnyFace",
+				"9": "NormalFemaleKangarooFace",
+				"10": "NormalFemaleSpiderFace",
+				"11": "NormalFemaleFoxFace",
+				"12": "NormalFemaleDragonFace"
+			},
+			"1": {
+				"0": "NormalAndroHumanFace",
+				"1": "NormalAndroHorseFace",
+				"2": "NormalAndroDogFace",
+				"3": "NormalAndroCowFace",
+				"4": "NormalAndroSharkFace",
+				"5": "NormalAndroNagaFace",
+				"6": "NormalAndroCatFace",
+				"7": "NormalAndroLizardFace",
+				"8": "NormalAndroBunnyFace",
+				"9": "NormalAndroKangarooFace",
+				"10": "NormalAndroSpiderFace",
+				"11": "NormalAndroFoxFace",
+				"12": "NormalAndroDragonFace"
+			},
+			"2": {
+				"0": "NormalMaleHumanFace",
+				"1": "NormalMaleHorseFace",
+				"2": "NormalMaleDogFace",
+				"3": "NormalMaleCowFace",
+				"4": "NormalMaleSharkFace",
+				"5": "NormalMaleNagaFace",
+				"6": "NormalMaleCatFace",
+				"7": "NormalMaleLizardFace",
+				"8": "NormalMaleBunnyFace",
+				"9": "NormalMaleKangarooFace",
+				"10": "NormalMaleSpiderFace",
+				"11": "NormalMaleFoxFace",
+				"12": "NormalMaleDragonFace"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "CorruptedFemaleHumanFace",
+				"1": "CorruptedFemaleHorseFace",
+				"2": "CorruptedFemaleDogFace",
+				"3": "CorruptedFemaleCowFace",
+				"4": "CorruptedFemaleSharkFace",
+				"5": "CorruptedFemaleNagaFace",
+				"6": "CorruptedFemaleCatFace",
+				"7": "CorruptedFemaleLizardFace",
+				"8": "CorruptedFemaleBunnyFace",
+				"9": "CorruptedFemaleKangarooFace",
+				"10": "CorruptedFemaleSpiderFace",
+				"11": "CorruptedFemaleFoxFace",
+				"12": "CorruptedFemaleDragonFace"
+			},
+			"1": {
+				"0": "CorruptedAndroHumanFace",
+				"1": "CorruptedAndroHorseFace",
+				"2": "CorruptedAndroDogFace",
+				"3": "CorruptedAndroCowFace",
+				"4": "CorruptedAndroSharkFace",
+				"5": "CorruptedAndroNagaFace",
+				"6": "CorruptedAndroCatFace",
+				"7": "CorruptedAndroLizardFace",
+				"8": "CorruptedAndroBunnyFace",
+				"9": "CorruptedAndroKangarooFace",
+				"10": "CorruptedAndroSpiderFace",
+				"11": "CorruptedAndroFoxFace",
+				"12": "CorruptedAndroDragonFace"
+			},
+			"2": {
+				"0": "CorruptedMaleHumanFace",
+				"1": "CorruptedMaleHorseFace",
+				"2": "CorruptedMaleDogFace",
+				"3": "CorruptedMaleCowFace",
+				"4": "CorruptedMaleSharkFace",
+				"5": "CorruptedMaleNagaFace",
+				"6": "CorruptedMaleCatFace",
+				"7": "CorruptedMaleLizardFace",
+				"8": "CorruptedMaleBunnyFace",
+				"9": "CorruptedMaleKangarooFace",
+				"10": "CorruptedMaleSpiderFace",
+				"11": "CorruptedMaleFoxFace",
+				"12": "CorruptedMaleDragonFace"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "LustyFemaleHumanFace",
+				"1": "LustyFemaleHorseFace",
+				"2": "LustyFemaleDogFace",
+				"3": "LustyFemaleCowFace",
+				"4": "LustyFemaleSharkFace",
+				"5": "LustyFemaleNagaFace",
+				"6": "LustyFemaleCatFace",
+				"7": "LustyFemaleLizardFace",
+				"8": "LustyFemaleBunnyFace",
+				"9": "LustyFemaleKangarooFace",
+				"10": "LustyFemaleSpiderFace",
+				"11": "LustyFemaleFoxFace",
+				"12": "LustyFemaleDragonFace"
+			},
+			"1": {
+				"0": "LustyAndroHumanFace",
+				"1": "LustyAndroHorseFace",
+				"2": "LustyAndroDogFace",
+				"3": "LustyAndroCowFace",
+				"4": "LustyAndroSharkFace",
+				"5": "LustyAndroNagaFace",
+				"6": "LustyAndroCatFace",
+				"7": "LustyAndroLizardFace",
+				"8": "LustyAndroBunnyFace",
+				"9": "LustyAndroKangarooFace",
+				"10": "LustyAndroSpiderFace",
+				"11": "LustyAndroFoxFace",
+				"12": "LustyAndroDragonFace"
+			},
+			"2": {
+				"0": "LustyMaleHumanFace",
+				"1": "LustyMaleHorseFace",
+				"2": "LustyMaleDogFace",
+				"3": "LustyMaleCowFace",
+				"4": "LustyMaleSharkFace",
+				"5": "LustyMaleNagaFace",
+				"6": "LustyMaleCatFace",
+				"7": "LustyMaleLizardFace",
+				"8": "LustyMaleBunnyFace",
+				"9": "LustyMaleKangarooFace",
+				"10": "LustyMaleSpiderFace",
+				"11": "LustyMaleFoxFace",
+				"12": "LustyMaleDragonFace"
+			}
+		}
+	},
+	"hips": {
+		"0": {
+			"0": {
+				"0": "FemaleHips0"
+			},
+			"1": {
+				"0": "FemaleHips1"
+			},
+			"2": {
+				"0": "FemaleHips2"
+			},
+			"3": {
+				"0": "FemaleHips3"
+			},
+			"4": {
+				"0": "FemaleHips4"
+			},
+			"5": {
+				"0": "FemaleHips5"
+			},
+			"6": {
+				"0": "FemaleHips6"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "MaleHips0"
+			},
+			"1": {
+				"0": "MaleHips1"
+			},
+			"2": {
+				"0": "MaleHips2"
+			},
+			"3": {
+				"0": "MaleHips3"
+			},
+			"4": {
+				"0": "MaleHips4"
+			},
+			"5": {
+				"0": "MaleHips5"
+			},
+			"6": {
+				"0": "MaleHips6"
+			}
+		}
+	},
+	"horns": {
+		"0": {
+			"0": {
+				"0": "NoHorns"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "DemonicHorns"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "MinotaurHorns"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "DraconicLizardHorns"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "DoubleDraconicHorns"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "AntlerHorns"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "Antennae"
+			}
+		}
+	},
+	"butt": {
+		"0": {
+			"0": {
+				"0": "Butt0"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "Butt1"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "Butt2"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "Butt3"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "Butt4"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "Butt5"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "Butt6"
+			}
+		}
+	},
+	"ears": {
+		"0": {
+			"0": {
+				"0": "HumanEars",
+				"1": "HumanEarsHair"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "HorseEars",
+				"1": "HorseEarsHair"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "DogEars",
+				"1": "DogEarsHair"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "CowEars",
+				"1": "CowEarsHair"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "ElfEars",
+				"1": "ElfEarsHair"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "CatEars",
+				"1": "CatEarsHair"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "SnakeEars",
+				"1": "SnakeEarsHair"
+			}
+		},
+		"7": {
+			"0": {
+				"0": "BunnyEars",
+				"1": "BunnyEarsHair"
+			}
+		},
+		"8": {
+			"0": {
+				"0": "KangarooEars",
+				"1": "KangarooEarsHair"
+			}
+		},
+		"9": {
+			"0": {
+				"0": "FoxEars",
+				"1": "FoxEarsHair"
+			}
+		},
+		"10": {
+			"0": {
+				"0": "DragonEars",
+				"1": "DragonEarsHair"
+			}
+		},
+		"11": {
+			"0": {
+				"0": "NoEars",
+				"1": "NoEarsHair"
+			}
+		}
+	},
+	"ovi": {
+		"0": {
+			"0": {
+				"0": "NoOvipositor"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "Ovipositor"
+			}
+		}
+	},
+	"hand": {
+		"0": {
+			"0": {
+				"0": "FemaleRightArm"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "MaleRightArm"
+			}
+		}
+	},
+	"eyes": {
+		"0": {
+			"0": {
+				"0": "NormalEyes"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "SpiderEyes"
+			}
+		}
+	},
+	"tail": {
+		"0": {
+			"0": {
+				"0": "NoTail"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "HorseTail"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "DogTail"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "DemonTail"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "CowTail"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "SpiderTail"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "BeeTail"
+			}
+		},
+		"7": {
+			"0": {
+				"0": "SharkTail"
+			}
+		},
+		"8": {
+			"0": {
+				"0": "CatTail"
+			}
+		},
+		"9": {
+			"0": {
+				"0": "LizardTail"
+			}
+		},
+		"10": {
+			"0": {
+				"0": "BunnyTail"
+			}
+		},
+		"11": {
+			"0": {
+				"0": "HarpyTail"
+			}
+		},
+		"12": {
+			"0": {
+				"0": "KangarooTail"
+			}
+		},
+		"13": {
+			"0": {
+				"0": "FoxTail"
+			}
+		},
+		"14": {
+			"0": {
+				"0": "DragonTail"
+			}
+		}
+	},
+	"gills": {
+		"0": {
+			"0": {
+				"0": "NoGills"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "Gills"
+			}
+		}
+	},
+	"wings": {
+		"0": {
+			"0": {
+				"0": "NoWings"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "BeeWings"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "LargeBeeWings"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "FaerieWings"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "AvianWings"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "DragoonWings"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "DemonBatWings"
+			}
+		},
+		"7": {
+			"0": {
+				"0": "LargeDemonBatWings"
+			}
+		},
+		"8": {
+			"0": {
+				"0": "SharkFin"
+			}
+		},
+		"9": {
+			"0": {
+				"0": "HarpyWings"
+			}
+		},
+		"10": {
+			"0": {
+				"0": "SmallDragonWings"
+			}
+		},
+		"11": {
+			"0": {
+				"0": "LargeDragonWings"
+			}
+		}
+	},
+	"head": {
+		"0": {
+			"0": {
+				"0": "FemaleHead"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "MaleHead"
+			}
+		}
+	},
+	"body": {
+		"0": {
+			"0": {
+				"0": "HumanFemaleNormalBody",
+				"1": "HumanFemaleFitBody",
+				"2": "HumanFemaleFatBody"
+			},
+			"1": {
+				"0": "HumanMaleNormalBody",
+				"1": "HumanMaleFitBody",
+				"2": "HumanMaleFatBody"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "FurryFemaleNormalBody",
+				"1": "FurryFemaleFitBody",
+				"2": "FurryFemaleFatBody"
+			},
+			"1": {
+				"0": "FurryMaleNormalBody",
+				"1": "FurryMaleFitBody",
+				"2": "FurryMaleFatBody"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "ScaleyFemaleNormalBody",
+				"1": "ScaleyFemaleFitBody",
+				"2": "ScaleyFemaleFatBody"
+			},
+			"1": {
+				"0": "ScaleyMaleNormalBody",
+				"1": "ScaleyMaleFitBody",
+				"2": "ScaleyMaleFatBody"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "GooeyFemaleNormalBody",
+				"1": "GooeyFemaleFitBody",
+				"2": "GooeyFemaleFatBody"
+			},
+			"1": {
+				"0": "GooeyMaleNormalBody",
+				"1": "GooeyMaleFitBody",
+				"2": "GooeyMaleFatBody"
+			}
+		}
+	},
+	"cock": {
+		"0": {
+			"0": {
+				"0": "HumanCock0"
+			},
+			"1": {
+				"0": "HumanCock1"
+			},
+			"2": {
+				"0": "HumanCock2"
+			},
+			"3": {
+				"0": "HumanCock3"
+			},
+			"4": {
+				"0": "HumanCock4"
+			},
+			"5": {
+				"0": "HumanCock5"
+			},
+			"6": {
+				"0": "HumanCock6"
+			},
+			"7": {
+				"0": "HumanCock7"
+			},
+			"8": {
+				"0": "HumanCock8"
+			},
+			"9": {
+				"0": "HumanCock9"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "HorseCock0"
+			},
+			"1": {
+				"0": "HorseCock1"
+			},
+			"2": {
+				"0": "HorseCock2"
+			},
+			"3": {
+				"0": "HorseCock3"
+			},
+			"4": {
+				"0": "HorseCock4"
+			},
+			"5": {
+				"0": "HorseCock5"
+			},
+			"6": {
+				"0": "HorseCock6"
+			},
+			"7": {
+				"0": "HorseCock7"
+			},
+			"8": {
+				"0": "HorseCock8"
+			},
+			"9": {
+				"0": "HorseCock9"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "DogCock0"
+			},
+			"1": {
+				"0": "DogCock1"
+			},
+			"2": {
+				"0": "DogCock2"
+			},
+			"3": {
+				"0": "DogCock3"
+			},
+			"4": {
+				"0": "DogCock4"
+			},
+			"5": {
+				"0": "DogCock5"
+			},
+			"6": {
+				"0": "DogCock6"
+			},
+			"7": {
+				"0": "DogCock7"
+			},
+			"8": {
+				"0": "DogCock8"
+			},
+			"9": {
+				"0": "DogCock9"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "DemonCock0"
+			},
+			"1": {
+				"0": "DemonCock1"
+			},
+			"2": {
+				"0": "DemonCock2"
+			},
+			"3": {
+				"0": "DemonCock3"
+			},
+			"4": {
+				"0": "DemonCock4"
+			},
+			"5": {
+				"0": "DemonCock5"
+			},
+			"6": {
+				"0": "DemonCock6"
+			},
+			"7": {
+				"0": "DemonCock7"
+			},
+			"8": {
+				"0": "DemonCock8"
+			},
+			"9": {
+				"0": "DemonCock9"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "TentacleCock0"
+			},
+			"1": {
+				"0": "TentacleCock1"
+			},
+			"2": {
+				"0": "TentacleCock2"
+			},
+			"3": {
+				"0": "TentacleCock3"
+			},
+			"4": {
+				"0": "TentacleCock4"
+			},
+			"5": {
+				"0": "TentacleCock5"
+			},
+			"6": {
+				"0": "TentacleCock6"
+			},
+			"7": {
+				"0": "TentacleCock7"
+			},
+			"8": {
+				"0": "TentacleCock8"
+			},
+			"9": {
+				"0": "TentacleCock9"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "CatCock0"
+			},
+			"1": {
+				"0": "CatCock1"
+			},
+			"2": {
+				"0": "CatCock2"
+			},
+			"3": {
+				"0": "CatCock3"
+			},
+			"4": {
+				"0": "CatCock4"
+			},
+			"5": {
+				"0": "CatCock5"
+			},
+			"6": {
+				"0": "CatCock6"
+			},
+			"7": {
+				"0": "CatCock7"
+			},
+			"8": {
+				"0": "CatCock8"
+			},
+			"9": {
+				"0": "CatCock9"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "LizardCock0"
+			},
+			"1": {
+				"0": "LizardCock1"
+			},
+			"2": {
+				"0": "LizardCock2"
+			},
+			"3": {
+				"0": "LizardCock3"
+			},
+			"4": {
+				"0": "LizardCock4"
+			},
+			"5": {
+				"0": "LizardCock5"
+			},
+			"6": {
+				"0": "LizardCock6"
+			},
+			"7": {
+				"0": "LizardCock7"
+			},
+			"8": {
+				"0": "LizardCock8"
+			},
+			"9": {
+				"0": "LizardCock9"
+			}
+		},
+		"7": {
+			"0": {
+				"0": "AnemoneCock0"
+			},
+			"1": {
+				"0": "AnemoneCock1"
+			},
+			"2": {
+				"0": "AnemoneCock2"
+			},
+			"3": {
+				"0": "AnemoneCock3"
+			},
+			"4": {
+				"0": "AnemoneCock4"
+			},
+			"5": {
+				"0": "AnemoneCock5"
+			},
+			"6": {
+				"0": "AnemoneCock6"
+			},
+			"7": {
+				"0": "AnemoneCock7"
+			},
+			"8": {
+				"0": "AnemoneCock8"
+			},
+			"9": {
+				"0": "AnemoneCock9"
+			}
+		},
+		"8": {
+			"0": {
+				"0": "KangarooCock0"
+			},
+			"1": {
+				"0": "KangarooCock1"
+			},
+			"2": {
+				"0": "KangarooCock2"
+			},
+			"3": {
+				"0": "KangarooCock3"
+			},
+			"4": {
+				"0": "KangarooCock4"
+			},
+			"5": {
+				"0": "KangarooCock5"
+			},
+			"6": {
+				"0": "KangarooCock6"
+			},
+			"7": {
+				"0": "KangarooCock7"
+			},
+			"8": {
+				"0": "KangarooCock8"
+			},
+			"9": {
+				"0": "KangarooCock9"
+			}
+		},
+		"9": {
+			"0": {
+				"0": "DragonCock0"
+			},
+			"1": {
+				"0": "DragonCock1"
+			},
+			"2": {
+				"0": "DragonCock2"
+			},
+			"3": {
+				"0": "DragonCock3"
+			},
+			"4": {
+				"0": "DragonCock4"
+			},
+			"5": {
+				"0": "DragonCock5"
+			},
+			"6": {
+				"0": "DragonCock6"
+			},
+			"7": {
+				"0": "DragonCock7"
+			},
+			"8": {
+				"0": "DragonCock8"
+			},
+			"9": {
+				"0": "DragonCock9"
+			}
+		}
+	},
+	"boobs": {
+		"0": {
+			"0": {
+				"0": "BreastsNullNip0",
+				"1": "BreastsNullNip1",
+				"2": "BreastsNullNip2",
+				"3": "BreastsNullNip3",
+				"4": "BreastsNullNip4",
+				"5": "BreastsNullNip5",
+				"6": "BreastsNullNip6",
+				"7": "BreastsNullNip7"
+			},
+			"1": {
+				"0": "BreastsFlatNip0",
+				"1": "BreastsFlatNip1",
+				"2": "BreastsFlatNip2",
+				"3": "BreastsFlatNip3",
+				"4": "BreastsFlatNip4",
+				"5": "BreastsFlatNip5",
+				"6": "BreastsFlatNip6",
+				"7": "BreastsFlatNip7"
+			},
+			"2": {
+				"0": "BreastsANip0",
+				"1": "BreastsANip1",
+				"2": "BreastsANip2",
+				"3": "BreastsANip3",
+				"4": "BreastsANip4",
+				"5": "BreastsANip5",
+				"6": "BreastsANip6",
+				"7": "BreastsANip7"
+			},
+			"3": {
+				"0": "BreastsBNip0",
+				"1": "BreastsBNip1",
+				"2": "BreastsBNip2",
+				"3": "BreastsBNip3",
+				"4": "BreastsBNip4",
+				"5": "BreastsBNip5",
+				"6": "BreastsBNip6",
+				"7": "BreastsBNip7"
+			},
+			"4": {
+				"0": "BreastsCNip0",
+				"1": "BreastsCNip1",
+				"2": "BreastsCNip2",
+				"3": "BreastsCNip3",
+				"4": "BreastsCNip4",
+				"5": "BreastsCNip5",
+				"6": "BreastsCNip6",
+				"7": "BreastsCNip7"
+			},
+			"5": {
+				"0": "BreastsDNip0",
+				"1": "BreastsDNip1",
+				"2": "BreastsDNip2",
+				"3": "BreastsDNip3",
+				"4": "BreastsDNip4",
+				"5": "BreastsDNip5",
+				"6": "BreastsDNip6",
+				"7": "BreastsDNip7"
+			},
+			"6": {
+				"0": "BreastsDDNip0",
+				"1": "BreastsDDNip1",
+				"2": "BreastsDDNip2",
+				"3": "BreastsDDNip3",
+				"4": "BreastsDDNip4",
+				"5": "BreastsDDNip5",
+				"6": "BreastsDDNip6",
+				"7": "BreastsDDNip7"
+			},
+			"7": {
+				"0": "BreastsGNip0",
+				"1": "BreastsGNip1",
+				"2": "BreastsGNip2",
+				"3": "BreastsGNip3",
+				"4": "BreastsGNip4",
+				"5": "BreastsGNip5",
+				"6": "BreastsGNip6",
+				"7": "BreastsGNip7"
+			},
+			"8": {
+				"0": "BreastsJNip0",
+				"1": "BreastsJNip1",
+				"2": "BreastsJNip2",
+				"3": "BreastsJNip3",
+				"4": "BreastsJNip4",
+				"5": "BreastsJNip5",
+				"6": "BreastsJNip6",
+				"7": "BreastsJNip7"
+			},
+			"9": {
+				"0": "BreastsNNip0",
+				"1": "BreastsNNip1",
+				"2": "BreastsNNip2",
+				"3": "BreastsNNip3",
+				"4": "BreastsNNip4",
+				"5": "BreastsNNip5",
+				"6": "BreastsNNip6",
+				"7": "BreastsNNip7"
+			},
+			"10": {
+				"0": "BreastsZNip0",
+				"1": "BreastsZNip1",
+				"2": "BreastsZNip2",
+				"3": "BreastsZNip3",
+				"4": "BreastsZNip4",
+				"5": "BreastsZNip5",
+				"6": "BreastsZNip6",
+				"7": "BreastsZNip7"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "LBreastsNullNip0",
+				"1": "LBreastsNullNip1",
+				"2": "LBreastsNullNip2",
+				"3": "LBreastsNullNip3",
+				"4": "LBreastsNullNip4",
+				"5": "LBreastsNullNip5",
+				"6": "LBreastsNullNip6",
+				"7": "LBreastsNullNip7"
+			},
+			"1": {
+				"0": "LBreastsFlatNip0",
+				"1": "LBreastsFlatNip1",
+				"2": "LBreastsFlatNip2",
+				"3": "LBreastsFlatNip3",
+				"4": "LBreastsFlatNip4",
+				"5": "LBreastsFlatNip5",
+				"6": "LBreastsFlatNip6",
+				"7": "LBreastsFlatNip7"
+			},
+			"2": {
+				"0": "LBreastsANip0",
+				"1": "LBreastsANip1",
+				"2": "LBreastsANip2",
+				"3": "LBreastsANip3",
+				"4": "LBreastsANip4",
+				"5": "LBreastsANip5",
+				"6": "LBreastsANip6",
+				"7": "LBreastsANip7"
+			},
+			"3": {
+				"0": "LBreastsBNip0",
+				"1": "LBreastsBNip1",
+				"2": "LBreastsBNip2",
+				"3": "LBreastsBNip3",
+				"4": "LBreastsBNip4",
+				"5": "LBreastsBNip5",
+				"6": "LBreastsBNip6",
+				"7": "LBreastsBNip7"
+			},
+			"4": {
+				"0": "LBreastsCNip0",
+				"1": "LBreastsCNip1",
+				"2": "LBreastsCNip2",
+				"3": "LBreastsCNip3",
+				"4": "LBreastsCNip4",
+				"5": "LBreastsCNip5",
+				"6": "LBreastsCNip6",
+				"7": "LBreastsCNip7"
+			},
+			"5": {
+				"0": "LBreastsDNip0",
+				"1": "LBreastsDNip1",
+				"2": "LBreastsDNip2",
+				"3": "LBreastsDNip3",
+				"4": "LBreastsDNip4",
+				"5": "LBreastsDNip5",
+				"6": "LBreastsDNip6",
+				"7": "LBreastsDNip7"
+			},
+			"6": {
+				"0": "LBreastsDDNip0",
+				"1": "LBreastsDDNip1",
+				"2": "LBreastsDDNip2",
+				"3": "LBreastsDDNip3",
+				"4": "LBreastsDDNip4",
+				"5": "LBreastsDDNip5",
+				"6": "LBreastsDDNip6",
+				"7": "LBreastsDDNip7"
+			},
+			"7": {
+				"0": "LBreastsGNip0",
+				"1": "LBreastsGNip1",
+				"2": "LBreastsGNip2",
+				"3": "LBreastsGNip3",
+				"4": "LBreastsGNip4",
+				"5": "LBreastsGNip5",
+				"6": "LBreastsGNip6",
+				"7": "LBreastsGNip7"
+			},
+			"8": {
+				"0": "LBreastsJNip0",
+				"1": "LBreastsJNip1",
+				"2": "LBreastsJNip2",
+				"3": "LBreastsJNip3",
+				"4": "LBreastsJNip4",
+				"5": "LBreastsJNip5",
+				"6": "LBreastsJNip6",
+				"7": "LBreastsJNip7"
+			},
+			"9": {
+				"0": "LBreastsNNip0",
+				"1": "LBreastsNNip1",
+				"2": "LBreastsNNip2",
+				"3": "LBreastsNNip3",
+				"4": "LBreastsNNip4",
+				"5": "LBreastsNNip5",
+				"6": "LBreastsNNip6",
+				"7": "LBreastsNNip7"
+			},
+			"10": {
+				"0": "LBreastsZNip0",
+				"1": "LBreastsZNip1",
+				"2": "LBreastsZNip2",
+				"3": "LBreastsZNip3",
+				"4": "LBreastsZNip4",
+				"5": "LBreastsZNip5",
+				"6": "LBreastsZNip6",
+				"7": "LBreastsZNip7"
+			}
+		}
+	},
+	"shade": {
+		"0": {
+			"0": {
+				"0": "NullOverF"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "FOverF"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "AOverF"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "BOverF"
+			}
+		},
+		"4": {
+			"0": {
+				"0": "COverF"
+			}
+		},
+		"5": {
+			"0": {
+				"0": "DOverF"
+			}
+		},
+		"6": {
+			"0": {
+				"0": "DDOverF"
+			}
+		},
+		"7": {
+			"0": {
+				"0": "GOverF"
+			}
+		},
+		"8": {
+			"0": {
+				"0": "JOverF"
+			}
+		},
+		"9": {
+			"0": {
+				"0": "NOverF"
+			}
+		},
+		"10": {
+			"0": {
+				"0": "ZOverF"
+			}
+		}
+	},
+	"balls": {
+		"0": {
+			"0": {
+				"0": "NormalBalls0",
+				"1": "NormalBalls1",
+				"2": "NormalBalls2",
+				"3": "NormalBalls3",
+				"4": "NormalBalls4",
+				"5": "NormalBalls5",
+				"6": "NormalBalls6",
+				"7": "NormalBalls7"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "FurryBalls0",
+				"1": "FurryBalls1",
+				"2": "FurryBalls2",
+				"3": "FurryBalls3",
+				"4": "FurryBalls4",
+				"5": "FurryBalls5",
+				"6": "FurryBalls6",
+				"7": "FurryBalls7"
+			}
+		},
+		"2": {
+			"0": {
+				"0": "ScaleyBalls0",
+				"1": "ScaleyBalls1",
+				"2": "ScaleyBalls2",
+				"3": "ScaleyBalls3",
+				"4": "ScaleyBalls4",
+				"5": "ScaleyBalls5",
+				"6": "ScaleyBalls6",
+				"7": "ScaleyBalls7"
+			}
+		},
+		"3": {
+			"0": {
+				"0": "GooeyBalls0",
+				"1": "GooeyBalls1",
+				"2": "GooeyBalls2",
+				"3": "GooeyBalls3",
+				"4": "GooeyBalls4",
+				"5": "GooeyBalls5",
+				"6": "GooeyBalls6",
+				"7": "GooeyBalls7"
+			}
+		}
+	},
+	"clit": {
+		"0": {
+			"0": {
+				"0": "Clit0"
+			},
+			"1": {
+				"0": "Clit1"
+			},
+			"2": {
+				"0": "Clit2"
+			},
+			"3": {
+				"0": "Clit3"
+			},
+			"4": {
+				"0": "Clit4"
+			},
+			"5": {
+				"0": "Clit5"
+			},
+			"6": {
+				"0": "Clit6"
+			},
+			"7": {
+				"0": "Clit7"
+			},
+			"8": {
+				"0": "Clit8"
+			}
+		}
+	},
+	"nipple": {
+		"0": {
+			"0": {
+				"0": "LeftNipple0"
+			},
+			"1": {
+				"0": "LeftNipple1"
+			},
+			"2": {
+				"0": "LeftNipple2"
+			},
+			"3": {
+				"0": "LeftNipple3"
+			},
+			"4": {
+				"0": "LeftNipple4"
+			},
+			"5": {
+				"0": "LeftNipple5"
+			},
+			"6": {
+				"0": "LeftNipple6"
+			},
+			"7": {
+				"0": "LeftNipple7"
+			}
+		},
+		"1": {
+			"0": {
+				"0": "RightNipple0"
+			},
+			"1": {
+				"0": "RightNipple1"
+			},
+			"2": {
+				"0": "RightNipple2"
+			},
+			"3": {
+				"0": "RightNipple3"
+			},
+			"4": {
+				"0": "RightNipple4"
+			},
+			"5": {
+				"0": "RightNipple5"
+			},
+			"6": {
+				"0": "RightNipple6"
+			},
+			"7": {
+				"0": "RightNipple7"
+			}
+		}
+	}
+}
