@@ -1,423 +1,988 @@
+	//Bug
+	B	mask clipping, as always
+			setting every single part to cached solves it, but still ugly.
+				how did I solved it the last time?
+	B	white pixels. can be fixed with sliding stuff but still nipple awful
+			parent changing?
+			blendshader?
+	//Implement
+	C	add horsecocks
+	C	add dogecocks
+	//Verify
+	C	update heightmod and tallness same time?
+	C	TiTS breasts rating
+	//Color
+	C	retrieve shader source
+//Annoying
+	lag when dragging lotsa characters.
+//Dangerous code
+	tremendous lag when redrawing lotsa smoothed bitmaps. be careful with them
+//Common bugs (fixed but can come back due to various mistakes)
+	can't find property/class/function
+		security set to internal/private/protected
+	button/slider/box looses functionality
+		removing from stage removes listener, change visible instead.
+//Bug dangers
+	weird life cycle on left (should not be a problem)
+	buttonMode sprite might not be removed. (adobe  bug)
+	test if too many children in pooled objects
+//Art
+	facial hair + brows
+	tailType2 is actually number of tail
+		each tail MC contains previous, but adds another unique tail
+	muscular arm
+	fix giant balls
+	more weapons.
+	tail shading
+	furry, gooey, scaley art
+	stripes/shines
+	lusty faces
+	breast 1-4 male torso cut
+	creator backgrounds
+	eve station for background
+//Code polish
+	Background ID constants
+	prevent updateCockIndex from firing twice
+	order alphabetically json files
+	instead of feeding both name and object to list dataProvider, have a function retrieve data.short, labelFunction something
+	remove three event listeners from slider and replace by main function
+	find a way to call updateEars from frontLayer, as well as updateclit and updatevag
+	USE A SHARED BITMAPDATA SYSTEM FOR BOOBD SHADOWS INSTEAD OF SHADE DUPLICATES
+	separate cycleGroup and cyclePart
+	leg define standing point?
+	*OverF to Shade* class name or something
+	menu class
+	parent class.
+	reviver class
+	loader class
+	remove singleton
+//Viewer polish
+	cycle musculature.
+	random weapon and weapon loading (depending on save).
+	find a better center-weighted random algorithm
+	have body+legs+hips inside a single parent for easier masking?
+	display names above NPCs
+	optimize shaded scaling
+	add a timer before drawing, to avoid slowing down rapid cycling
+		bitmap smoothing?
+		works fine for normal chars
+	scale boob shades with boobs
+	fix black goo girl everything incomprehensible
+	better solution for char ordering
+	slightly randomized buttons
+	init pools on startup.
+	cleanup bloated pools.
+	make closest cock lowest
+	glowfilter on char over
+	scale in opposite direction cock and stuff when scaling body
+	toggle button
+	tab browsing left-right arrows
+		glowFilter "pooling"
+		enter down	> mouseDown
+		enter up	> mouseUp
+	seperate left and right boob.
+	dynamic dynamic lighting (aka smaller bitmap decides average).
+	list shift-click should select from last-click
 //Dormant
 	load game from text
-	load game from .sol
-//Art
-	real clothes system
-	kitsune
-	tail shading
-	skin types
-	convert assets to bitmap
-//Code
-	optimize /w scrollrect
-	rewrite maximum cycle int or something
-	reduce 100 for cocks and boobies
+	load game from .sol (prompt path/.open())
+	lips, nipples, cock, fur color
+	scale cycle
+	shadow on ground
+	chain menu opening thingy?
+	reshade only part of shading
 //Done
-fixing missing heads
-fixed cycling boobs error message
--Sending build to fenfen
-AMBIANT LIGHTING
-TiTS DICTIONARY
-ADDED BACKGROUND FOR TiTS
-removed useless DIC_DATA singleton
-replace flashmode by GUIMode
-fixed white text when switching to no-save-CoC
-taller goblins
-fixed NPC part dragging
-creatures hand click
-NEW DICTIONARY SYSTEM
-mouse enabled hero
-FIXED BOOB SHADOWS
-fixed loader text
-fixed chrome loader
-fixed crash when no save
-drastically reduced font sizes
-added loading screen, yay! (still starts at 30%, butt fuck it).
-fixed tits panels
-fixed focus (thank god)
-added singleton to hold focus array, and flash mode
-added message in case fullscreen blocked
-fixed fullscreen not working
-temp fix for drop outside
-finally fixed mouseleave
-fixed mouseleave event
-tons of scrollbar fixes, that has been waiting for too long
-giant balls (up to 25in) not very pretty, but much more than before
-fixed snapinterval fucking up text
-fixed no snapinterval for cocks and boobs
-fixed dropping creature outside zone keeping drag
-fixed creature deletion, now powerful getbound system.
-fixed annoying dropdown crash, and cleaned up styles.
-NPC spawning pos more intelligent
-fixed NPC tonote reset
-fixed panels taking useless memory
-gave stated to picker buttons
-made picker have the right color since the beginning
-added text to color picker
-added coc styles to cpickers
-mastered colorpickers styles
-fixed y for dropdown and colorpicker
-fixed mouse giving focus
-removed focusrect for more elements
-added colorPicker
-removed rectskin from dropdown
-added complete focus support. no ugly focusrect, just plain ol glowfilter goodness
-remove useles types
-fixed weird glitchy tall slider text
-fixed sidearrow placement
-changed default hair color to grey
-made tits bar better
-npc menu crash
-better tonote automatic scroll down
-fixed scrollbar crash and cellrenderers
-fixed slider over crash
-better boob slider entry
-fixed one-entry dropdown being displayed
-fixed single cock/boob crash
-fixed charcap masking
-added body cycle bodyghost
-added basic boobshade drawing
-added basic bodyshade cycle
-fixed a bug that gave the wrong shade indexes
-made body contain his own shade, to avoid further index issue
-fixed wrong hair index
-fixed first boob row not being shaded
-made basic body shadow adding
-made cycle transmit mask
-added boob shadow type array
-fixed a most of breasts being broken
-replaced the overly complicated string system for coloring, with a much more powerful code system.
-fixed female leg body connection
-fixed foe menu not showing more than 10 chars
-deleted default scrollbar types
-added states to tits scrollbar
-added clearAll to foe and NPCs
-better cock randomizer
-added fancy index setting: you can pass through multiple children if you don't touch them
-added mousewheel index setting
-removed doubleClick remove from charactersParent
-fixed mainParent not appearing
-NPCParent -> charactersParent
-mainParent now part of NPCParent, for index purpose
-fixed only foe being you (man that was a deep bug)
-made scrollable lists keep track of what was added, and not, and support multiple selection
-added scrollable NPC list, supporting theoretically infinite amount of NPCs
-added . to a few toNotes
-fixed not being able to drop chars on sidebars
-added foe loading
-replaced CREW by NPC
-addCocks now add them at random order;
-more and more combobox tweakings
-removed style track to use a part of the DIC_Slider thingy, because I grew tired of that shit. We now have a real min and max
-added on remove to slider
-set snap interval to slide on smaller intervals
-nipple reduce when boob grow, but not when boob shrink
-fixed double nipple when activating nipple size transmission, nipple now transmite when cycling breast
-slightly better ball scaling
-made ear autoCycle to fit hair
-made scrollbar fit into bg
-reduced cocks>3 artifacts
-reworked main scrollbar, lee glitchy
-finished both dropdow, custom scrollbars, basically perfect.
-completely redone both dropdown boxes, and their classes. Fixed a whole lot of glitches and ugly stuff.
-fixed shuffle eyes after cycling
-fixed phantom face for malehumanhead
-i think this made me physically ill.
-5 HOURS RETRYING THE SAME BULLSHIT I DID BEFORE BUT GOOD.
-5 HOURS TRYING TO USE DUMB SHIT
-5 HOURS TO UNDERSTANDING SHIT
-5 HOURS TRYING BULLSHIT
-IM SUCH A FUCKING BOSS
-FINISHED MATHEMATICAL SHADING DEDUCTION
-etc...
-skinTone -> skinColor
-other shade -> bitsshade
-otherbits -> bitscolor
-fixed wrong index for charres, definityvly
-fixed create crash
-removed none feature
-tweaked rotrange form for dicks
-fixed funny dick coloring when loading chars
-more tits dropdown tweaks
-fixed dropdown box sliding 
-readded AA for buttons
-TiTS dropdown tweaks
-added cell renderer styles to dropdown
-fixed dropdown font size
-replaced "NPC" with "creature"
-tweaked scrollbar height and y
-tweaked sliders a lot, now a lot better
-fixed slider res reset value too low
-fixed slider res beneath button
-fixed sliderbar thumb not buttonmode
-fixed sliderbar not dispatching when clicking bar
-fixed scrollbar hiding thingy 
-style manager instead of stupid bullshit, so easier
-added stagelock to prevent changing player when drawing bitmap
-made reset refresh saves
-added dynamic, real time resolution display
-fixedcoc dropdown crash
-mixed reso control with button
-added resolution control for char cap
-changed progressbar color
-fixed list slightly to the right
-finished dropdown gui coding, cell renderer to finish
-fixed crash sliders
-fixed not remvong useless styles
-set dropdown scale higher
-changed panels again to make dropdown and button more visible
-fixed toogles and change eye color targeting crew
-fixed coc-tits button not reseting if leaving too fast
-fixed not being able to drop on panels
-added dropdown list GUI. No list nor textformat because bug, but working on it
-hidden phantom scrollbar. No idea what it, or how it's added.
-new beautiful slider thumb
-fixed wrong scrollbar thumb
-terribly annoying bug forcing me to load a previous version, and fucking a lot of stuff up, fixed
-scrollbar GUI added
-slider GUI added. Ugly, but it works very well.
-added support for setStyle
-fixed pale white
-fixed no cocks for tits chars
-removed crew pos delete
-reworked crew positioning system
-crew members now unique
-fixed butt cycling
-fixed crew deletion by dragging, fucked up goblins, will be hard to find a good way to do it
-fixed crew menu too low
-fixed not loading crew
-added loading crew members!
-seperated menu updating from loading
-separated completely drawing from loading
-fixed typos and such, it works!
-made initGUI prettier by seperation the 3 menu arrays
-seperated titsmenu and cocmenu, so it doesn't bite me back later. Both menus are now 100% independant.
-fixed tits char not having vags
-finished nippples! Yes!
-drawChar now takes niplength in account
-fixed nipples scaling resetting
-fixed new breast buttons not cycling nipples
-fixed cycling left-right instead of size
-fixed nipples not cycling
-removed setX, and used regExp instead
-fixed cycle needing parts to be in drawParent
-added nip cycling
-made list creationg simple, and support multip part cycling (nip1 and nip2) worked on the first try, yay!
-fixed balls background
-cycling boobs keep nipples color, yay! Not very pretty, and will maybe have to rework cycle to automatize stuff, but it's working fine.
-nipples now part of boob part, but can be cycled internally. Forced me to add an exception to cycle, but avoid complex positioning and scaling system
-repositioned and rescaled every damn nipple
-placed every nipple on every breast ugh
-added loadTiTS YAY!
-added loadFromDefault for consistency
-fixed no back button for tits background
-added anti-alias to notes
-finished tits panels
-removed obsolete empty coloring parts
-changed export name to DIC
-locking charcap and backcap at same time because they are pretty ugly alone
-tts notes a lil bit prettier
-instead of changing existing buttons, recreate them altogether
-gave parent to basic button
-fixed arrows not changing type when executing a function telling them to
-added framLock 
-removed requirement for a parameter saving button text
-made entire loading sequence a lot more pretty, now time to solve all the shit I broken
-removed technical from drawchar
-clarified loadgame, load black, load main char, etc. Now "load -> add -> draw" with load varying from loading mode
-finished most part and functions of tits GUI
-finished fixing arrow directions
-maybe fixed tits font (didlelidondone)
-fixed tits arrow wrong orientation
-fixed tits arrow wrong mode
-made tits panels a bit better
-fixed tits arrow too bright
-fixed back button
-integrated tits arrows
-fixed tits-coc button not switching text
-fixed notes title AA
-fixed "dic character viewer" not having right font+color
-fixed reseting bugging background
-removed note border
-btn parents now independent from panels, which were grouped
-fixed notes not switching
-fixed buttons not switching
-fixed switching fucking up locking
-added border to notes
-added basic tit coc switching
-separated CoC and TiTS, named common parts DIC (short for dictionnary, play on word)
-added nipples colors
-added nipples basic drawing
-added nipples to library. very tough
-testing texture
-fixed boyhair
-changing 9slice doesn't fix box issue. Weird.
-fixed earHair too short
-fixed male head
-FIXED EVERY SINGLE DICK HEAD
-auto-capital dropdown box
-added semi-covered ear. Cycling can be better
-loading not resetting correctly characters, nor setting skin colour.
-loading should be fixed, but it does weird stuff
-fixed memory issue with cap
-added click animation to arrow button
-fixed balls shadow glitchy
-finished ball scaling. can be better
-fixed cock menu not appearing
-fixed fox tail so big it bugged size managing
-sorted the data alphabetically
-made the data object sent to dropdown a lot more prettier.
-"fixed" shiny black
-fixed dropdown list loosing event
-changed menu arrays to object for easier adding and menu updataing
-better off button
-finally fixed damn 9slice scaling. Morality, NO SYMBOLS IN THE SCALE PART. Thanks to this shit I had to have a nested scaled part, and I hate this.
-which fixed boob sliding
-fixed passing wrong rotation when cycling
-fixed hand not cycling with body
-fixed useless add event listener
-fixed temporary more cock index fix
-fixed click animation (now "on down -> on up" rather than weird stuff)
-fixed addInfo reseting
-fixed flat lower boob
-remade knife. not very good, but presentable
-made hear a little better
-fixed boobA lining
-fixed bald head line
-fixed button animation
-fixed over event
-fixed only 3 boobs to add intead of 4
-fixed cock cycling rotation
-Temporary dick index fix for create
-Fixed toNote not adding correctly
-FINISHED BOOBS AND COCK ADDING THIS IS A WONDERFUL WORL. Just kidding I spent so much time hating it I just can't forgive.
-fixed clicking while dragging
-added boob and cock selection highlights
-set button 9-slice scaling
-fixed ball 8 movie clip
-fixed eyes changing color for no reason
-made cat tail thinner
-which fixed tail coloring
-removed the colorgroup system, for more flexability
-fixed dragging body parts AGAIN
-added over and out btn Animation
-fixed hair loosing color when cycling
-modified cock MC ref point
-made clit and balls normal arrays
-fixed clit base skin
-completely remade the cock rotation system, not exactly as good as expected, but nice
-allowed bigger boob size for rating 100
-made the data slider change system more elegant, with array containing all the info I need instead of guessing it
-added boob and cock scaling max values
-fixed dick base
-fixed tail cycling
-fixed scollbar 9-slice scaling (that sjit is good)
-fixed cycling back over max
-fixed charcap clipping (masking be bitchin')
-fixed wrong boob scaling
-fixed create doesn't open
-fixed rainbow clit
-"novag, femalevag, malevag" becomes "nofemalevag, nomalevag, femalevag, malevag" for multi cycling purpose;
-merged coc-arrow and coc-updown
-added 9-slice scaling to the button instead of various frames
-removed all button specific event listeners, with the exception of the dropwdown list. Should help the garbage collector.
-reworked button system to add hover and down animation
-buttonMode instead of event
-more toggles for normal player
-IT JUST FEELS SO RIGHT
-OH MY GOD THIS IS BEAUTIFUL
-SERIOUSLY, WE CAN MAKE AN EDITOR WITHOUT A SINGLE GLITCH
-FUCK YES MULTIPLE PART CYCLING THIS IS AWESOME
-added note for everything
-added loadMenu menu note support. Gonna try to note each and every single one of them
-skinType now a dropdown box 
-removed useless trace();
-added NPC and cycling notes
-added colorPart to shorten cycle and avoid redundancy
-modified lake to give better perspective
-fixed drawing crash
-fixed scaling crash
-balls not appearing was due to ", skinType" being erased.
-finished cleaning library
-opening sliders when no big parts causes crash
-over last boobs even if Z
-wrong bodytype
-actual name for label for dropdown
-	Did the guy even understood events?
-used currentTarget to avoid confusion
-bettered event to handle nested events
-added clear all to equipment
-added equipment support
-added a scale function
-organized accesories functions
-added a remove function
-dick resizing crash
-slider function added
-shading force option
-redone background system
-remade menu elements adding
-fixed menu parents
-dropDown above slider
-recreate boob slider
-ball slide don't show up
-optimized object dragging system
-no back button for slider
-werid event cock slide
-fixed big cock ary
-normal background button
-multiple cock scalings
-clit skin to pretty things up
-clit scaling
-clit adding
-slider keep feet same x and y
-cycling boobs
-cycling dicks
-no arrow bug
-dick overlaping
-dick-boob indexes
-additem masking
-additem proper index
-additem proper scaling
-additem proper event system
-additem delete position
-additem delete all
-fixed screencap scaling
-locking unusable buttons
-cycling balls
-cycling	clit
-fixed repetitive firing of the charCap function bloating memory
-correct sizes and scaling
-charcap-backcap
-screencap
-fixed characterParent Placement
-create: on opening file crash
-slider code
-rewriting menu
-real back button
-rewrite dictionnary
-rewrite drawing
-rewrite color
-rewrite background
-setskintone setskinshade account parts tone and shade
-fix additional flat nipples
-dynamic sliders
-better textbox
-deactivated addremove btns
-dropdown menu not working
-name boob and morecock correctly
-reset not resetting curY ect... for multicock
-reset not reseting player name (Mari problem)
-two sizes of buttons
-UI slider
-scrollbar not in place dropdown
-better tween
-cache as bitmap
-scrollbar invisble when not needed
-cycle cock type button
-fix additional cocks boobs
-boobs not cycling correctly
-hand cursor
-deletion possible message
-ugly addremovebtns
-ugly btns
-reset not reseting all buttons
-flat nipples not shaded	
+	now uses GSkinner color matrix class.
+	set tallness slider minimum to 4 instead of basic tallness
+	changed every tail to work behing goo bodies.
+	fixed dropping-out not deleting creatures.
+	fixed updateCockIndex. Ugly, but I guess it works.
+	finally fixed weird boob bug, dark boobs weren't reset.
+	if get next class fails to find ID, returns object class
+	fixed weird boobs rotated.
+	fixed horsecocks again
+	fixed leg menu having center button
+	fixed created player saving screenshots named "You."
+	fixed cock menu back button returning to main menu
+	fixed updating panels when there's no need to.
+	fixed not switching modes
+	fixed horsecocks a bit
+	integrated horsecocks
+	fixed legs knee shading
+	now correctly sets player to null in layers.
+	removed DIC.isTiTS. its a proud moment
+	color json files now ordered alphabetically
+	fixed a bug where haircolor was not correctly defaulted
+	tried buttons going far left or far right, doesn't look that good.
+	fixed invisible arrows and bad text styling
+	character created slightly more to the left.
+	fixed every missing skin colors being warned as "white"
+	furbody now less saturated
+		it's super effective!
+	added desaturate function to colordict
+	now uses menu object as notesList keys
+	updated updateSaveBtns
+	fixed breasts linking to body shadow
+	fixed clit/vag cycling visual bug
+	added a placeholder system to replace missing colors from bitsColorDictionary
+	added reload button
+	fixed a bunch of slectbox glitches
+	fixed a bunch of slider visual glitches
+	changed ViewerArrows even system (for the better)
+	fixed theoretical ball crash
+	now only cycle if the part changed.
+	fixed cock bg getting in the way
+	fixed crash when reseting with nps on screen
+	fixed hand crash
+	replaced a few drawing functions with add part
+	fixed leg loading
+	fixed updatecockindex
+	fixed slider  visual glitch
+	fixed not setting modes for slider textfield
+	modifed sibijak's button class to remove lack of label update bug
+	fixed every styles for combobox
+	fixed clearchar not actually clearing characters
+	fixed using clear char fucking up selection
+	fixed list not displaying correct font and color
+	fixed list not displaying text
+	now correctly set dragTarget to null after dropping
+	universalized out-screen dropping to all chars
+	fixed bug where undefined hair color would result in black-ass bodies
+	added yellow hair color. slightly more saturated than blonde
+	Fixed a potential bug where a player having the same name as an NPC would fuck shit up
+	FINALLY fixed every char names "You"
+	fixed every chars named after mainchar
+	fixed scrollbar crash
+	fixed tits loader not loading NPC saves anymore
+	made scrollbox onChange beautiful
+	seperated addnpcchar and removenpcchar  for prettiness.
+		changed the underlying scrollbox system too obv
+	fixed background order messed up. was I high?
+	fixed notes width height
+	fixed invalidating not hiding shader causing ugly shit.
+	fixed eye tint crash on tits
+	fixed lack of shading update when toggling
+	FINISHED EVERY SYSTEMS! Only bug-fixing, meta stuff and documentation.
+	made menu-element getting prettier
+	added invalidation system to avoid overshading
+	reduced lighting intensity
+	fixed red parts remaining after.
+	fixed not reseting scalable parts
+	recreated fox tail from scratch to remove weird-ass bug
+	fixed face lines being called shading
+	now uses MovieClip's dynamic properties to name the ball scalable part MC
+	now uses MovieClip's dynamic properties to "move" children names to the parent
+	fixed boobslider crash
+	FIXED EVERY HAIR PIECE TO GO WITH A TRANSPARENT BODY
+	fixed no eye colors on create
+	added hips shading
+	fixed more big boob crash
+	turned invisbible nips to size 0 nips in the nullchest part
+	fixed boobs crash, restaured boob sliding
+	dictfindpart > findpart
+	fixed the bug where white pixels appeared above masked areas
+	removed floating pixels under boobs
+	fixed dark legs not cycling
+	fixed HUGE hips and boobs on last row breaking the fabric of the universe
+	fixed central button on legs menu cycling
+	FINALLY FIXED EVERY BOOB PROBLEMS!
+	fixed dark nipples appearing clear after cycle
+	fixed nipple shade not transfering on cycle
+	fixed random nipple in no-nipple breasts
+	remove ZOverF shade from dict
+	now uses *4 instead of *2 to decide nip length
+	fixed every nipple being 4 inches long.
+	now support deleting non-dictionary elements
+	now allows anonymous part adding. Since the dictionaries allow weak ref, it cannot prevent garbage collection
+	now color nipples from mask part
+	added nulloverF shade
+	removed stupid belly nips being always present
+	DO YOU KNOW WHAT I JUST DID?
+		using nearly only flash scripts, I duplicated every boob part 7 times, set their as3 names to the right one
+		and then using more scripts swapped nipples to be the right size.
+			now the code is trivial
+	added NullChest elements, to allows breast of size 0 and no-breast to coexist
+		the difference is nipples
+	dleted old breast warp
+	added save translator class
+	moved skintype skincolor and such to character.properties
+	removed any include from Character
+	added partCreator class, to handle character drawing
+	fixed update cock index
+	fixed boob shadows a bit
+	fixed hairless earless heads looking weird
+	cleaned up updateCockIndex, not sure of fixed though
+	cleaned up slider to the minimum acceptable
+	fixe cycling cock from length-0 cocks leaving them floating in the air 
+	fixed face gender switch
+	"empty" cocks are now added to ease cycle
+	updated naming system, to avoid the need for constant concatenation
+	deleted useless hair class
+	removed placeholder cycler
+	removed the need to chekc null element in cycle
+	changed cycle to take first ID then increment
+	changed viewerArrows to receive an array, that is now set in whatever menu instance is sent
+	added function replaceChildren
+	fixed no error message showing when cycling null part
+	added usage security to setPartClass
+	now using setPartCLass in cycle
+	now using setPartIndex in update ear
+	added setPartIndex
+	added setPartClass
+	cleaned up cycle
+	cleaned up setBoobShadows
+	fixed crash with big balled chars
+	fixed clipped shades
+	ADDED BACK BOOBD SHADOWS
+	fixed dark parts loosing color when cycling.
+	removed the need to add real part name to PartPainter.addPart()
+	added basic cock index setting. Needs updating.
+	now cycles ear so it doesn't mess with hair style
+	polished note box.
+	removed old annoying hack in TiTS loading
+	fixed ratio slider loading bar
+	fixed rightpanel GUI
+	polished tits sliders for hours
+	added a stupid system waiting for a better solution to fix body cycling.
+	cried myself to sleed
+	fixed god damn eventhandling on arrow buttons, (fuck asdpc again)
+	added random goblin flask for fun
+	added MathUtils.randomCentered
+	fixed cycling not starting over
+	readded arm moving to adapt weapon
+	removed backHair and ballMC from partNames.json because it's the same as hair and balls
+	fixed cycling wrong hair index
+	fixed crash when cycling heads
+	IT WORKS
+	fixed bug where getreverseddictionary would use null instead of class
+	made functional character cycle function
+	added cycle functions to classDict
+	added removePart to colordict
+	Refactored classdictionary, now using classes instead of strings.
+		removed a lot of useless stuff
+	changed savesbtns to savebtns
+	added clearPlayerObject to avoid recreating the player char each loading.
+		it was pumping memory.
+	fixed crash when attempting to create kitsune without correct class in tits mode
+	made random work for TiTS
+	FOUND A PRETTY FUCKING WAY TO DEFAULT ANNOYING CLASSES! FUCK YEAH
+		it's just so pretty, and only generated one instance per defaulting
+		and it's just so beautiful and stuff.
+		slight drop of performance in defaulting heavy chars though :c
+	fixed being unable to remove NPC
+	buttons now appear higher in tits mode, to fit the rest of the GUI
+	body fur now darker
+	updated cycle menu
+	added parsemenu entry
+	added complete viewerarrows class
+	seperated styles for arrows
+	changed the ol bullshit point as a parameter to Character.init
+		new getter setter for standingX and standingY
+		fixed char pos
+	cleaned up addNPCchar
+	commented old tab-browsing system, removed tut from welcome textfield
+	fixed creation position
+	now using colormatrixfilter to color accurately those pretty bangs.
+	fixed goblinnpc class not lined correctly
+	added custom class to goblins to allow random hair color;
+	fixed IDE persuaded of duplicate symbols (no idea how though)
+	added back NPC adding
+	added ViewerScroll Class
+	now check allowsFullScreen instead of try/catch
+	bug when scaling to max height solved.
+	removed clit doesn't appear if balls too big
+	fixed random hair too long
+	removed buttonmode and text from disabled selectbox
+	cannot take any screenshots if a screenshot is being encoded.
+	fixed tails stuck on right corner.
+	now using sprites wherever possible.
+	added partPainter pooling to save memory.
+		slightly less steep memory curve.
+	fixed it again.
+	fixed getRandom*Color
+	added getRandom*Color to colorDictionary
+	added scaleTargetFrom
+	fixed boob crash
+	added random CoC character.
+	reduced 479 functions created each gui switch to 59-68.
+	fixed invisible back button
+	implement setCompSize to IViewerComp to serve as a hub
+	fixed ball crash
+	now using utils class for Character class too.
+	DataUtils class
+	MathUtils class
+	MCUtils class
+	added a ViewerNotes class. handles scrollbar and toNote.
+	fixed clearchar crash
+	reactivated warning mode, cleaning up thousands of implicit conversions
+	same for "create key item"
+	removed "createPerk" function because It's useless to me and i'm too lazy to download perkclass
+	fixed edge-case with cock and boobs
+	fixed invisible disabled select
+	fixed boobslider and cockslider value reseting on change.
+	scaling re-shading
+	fixed problems.
+	lotsa problems though
+	finally added the cocksliders and boobsliders back.
+		so why the function leak?
+	NOT A SINGLE BUTTON IS CREATED DURING USE ANY MORE, ONLY AT LOADING
+	finally added updateBasicBtns, removing lag, the lack slider update, and restored the ability to power-use the switchGUI button
+	fixed colorPicker start color
+	changed and hopefully finally fixed that god damn eye system
+	fixed clearChar and clearCreatures crash
+	removed old references to selected lists
+	cleaned up imports
+	fixed setSize problem, sad asdcp uses a function too different and not overridable, so it's direct width setting
+	removed the countless variation of the addButton function for each component by add component
+		interfaces are sweet yo
+	added IViewerComponent interface
+	simplified addcock addboobs
+	fixed combo boxes and pickers, fuck
+	fixed color menu not correctly indexed
+	new note system
+	optimized testClass function. yiha
+	added "blond" haircolor, just a clone of blonde
+	added classes for scrollbar and pickers
+	removed currentChar variable
+	ISN'T THERE A FUCKING COMPONENT LIBRARY IN THIS WORLD THAT JUST WORKS? FFS
+	finally fixed the jumpy characters drop
+	dropdown boxes functional again.
+	solved tits slider crash
+	not reusing save btns instead of recreating them
+	now using a single tweening library (no more greensock)
+	removed communication functions using get-setters
+	fixed char dropping (out of bonds and stuff)
+	removed old event handlers
+	added a beauiful loading screen (with credits)
+	fixed screenshot button not appearing when creating
+	cleaned up breast assets
+	made sure no set-up movieclip still exist
+	added a color menu for the creator?
+	centered buttons
+	fixed autorepeat
+	fixed changing char removes dyn lighting
+	Now only getting local sharedObject on init and soon, on update.
+	Now using simple bitmapdata switching
+	BOOSTED background drawing using copy-pixel. slightly more memory intensive.
+		I'm pretty dumb, I can just switch bitmapData
+	optimized and fixed dynamic lighting
+	sliding much more simple.
+	made slider text more responsive.
+	solved annoying snapping issue by downloading the fucking library and modifying snapValue function.
+	solved awful com compile error
+	added a simple screenshot lock function
+	fixed screenshot crash
+	simplified the loading structure.
+	fixed function leak.
+	interface now mostly functional again. 2 days of hard labour that was.
+	REWRITTEN THE ENTIRE GUI. NEW COMPONENTS, NO MORE BUTTON RECREATION, NO MORE FLASH COMPS, NO MORE .fl, CLEANER
+	removed any function saving inside the updateMenu functions.
+	renamed folders to follow correct practive.
+	added lot's of comments.
+	rewriting shader for speed, better, but results are not as good.
+	removed the need for enterframe slider event.
+	Mouse always visible because of FUCKING TheMiner.
+	THERE WAS NO LEAK! I just made so much memory improvement the garbage collector wasn't running! (there can still be one fo buttons though)
+	fixed possible character leak.
+	found the button trace stuff.
+	fixed listeners disapearing after reset
+	fixed giant random cocks
+	fixed text not changing color;
+	fixed clickFastTimer not stopping sometimes.
+	fixed absence of fur.
+	fixed numerous tail-related crashes, added more info into crashes.
+	added the partNames class, a new JSON class containing children names, and cleaned up a lot the drawing procedure.
+	added JSON containing children names
+	rewritten and clarified a few things about colors.
+	removed memory leak.
+	player now reset for each things.
+	Using fixed-length vectors inside classDict now. Need typing.
+	Huge effort to remove anything static.
+		New class ViewerData, containing dicts and pools
+		removed any remaining embedded stuff in DIC
+	noteEvent properties now read-only.
+	replaced clearChildren by more efficient replacment.
+	fixed another shader crash.
+	OPTIMIZED FUKIN COLOR TRANSFORMS I'M SO SMART.
+		now you get the actual color.
+	removed useless traces.
+	Now dispatching errors instead of shouting on trace.
+	final classes do not change total mem
+	solved last bug with a 1ms timer. God that feels good.
+	OH MY GOD DO I FUCKING HATE ADOBE.
+		apparently multiple shadejob instances interact, even if one is dead, and any job started in the same frame the last one was cancelled WON'T START.
+	now remove shaders and kill jobs (at least it should)
+	fixed a crash when removing shader during tween.
+	fixed a create shader crash and loader crash
+	loaders bad idea, force online :c
+	attempted to use JSON array: not in AS3 I won't.
+	moved toNote to noteEvent.
+	dictionary does basic part reset.
+	partref removed
+	fixed wrong colors
+	solved the uncolored eyes bug.
+	IT WORKS (rewriten integrality of coloring system);
+	Added partPainter and colorDictionary classes
+	Moved translators to classDict
+	ShaderLayer workin' fine
+	cleaned up character import.
+	added ShaderLayer class, rewrote most of anything inside.
+	added alpha transition to player creation.
+	added greensock for better tweening
+	now using lower precision for shading
+	rewritten parts of addMainchar and addNPCchar, still have to move the loading someplace else
+	fixed part being added for no reason.
+	added sortChildrenOn
+	reduced amount of string objects by using arrays inside the class dictionnary
+	reduced amount of strings saved permanently by changing reversed keys to ints in reversedClassDict
+	fixed cockSlider + boobSLider types (:*)
+	replace every *slide by on*slide
+	fixed error:could not delete
+	commented useless drawFunction
+	fixed clearAll clears mainParent wtf?
+	fixed toNote event (did not bubble)
+	removed DIC ct:ColorTransform
+	head now using correct dictFindPart system.
+	cleaned up draw functions
+	POOLING NOW FULLY OPERATIONNAL FOR ANY BODY PART.
+		character creation much faster
+	removed added message for each NPC
+	fixed GODDAMN annoying bug with pooling: kept creating objects because old were never added to stage.
+	fixed cock width varying more and more with each char
+	fixed one list bug duplicating instead of removing
+	started object pooling, still got duplicates problems
+	all drawing variables are declared and not reused.
+	EVERY SINCLE { is now on a new line
+	reversed dictionary for optimisation.
+	fixed a few new drawing crashes
+	addClit added.
+	optimized switchGUI, much faster.
+	removed most of the .name property.
+	removed old dictFindPart placeholder
+	now using classDict functions, need to remove intermediary.
+	dictfindpart no cleaned and optimized
+	any function messing directly with classes is now inside the class dictionary
+	added a working dictionary class. Now I need to use it.
+	fixed crash when first element of a type is not defined?
+	fixed bad shading screenshot
+	prevented cycle to call colorChar if char is not finished drawing
+	fixed cocks cut outside body
+	added setWeapon function. Will need enhancement when more weapons are added, but will do the trick until then.
+	made shader system better. will maybe need a setBlender thing, will work when I actually have new shaders.
+	fixed classdictionary not switching
+	removed useless filters from main
+	mainGooShader->gooShader
+	make size 0 breast to each row. Unfortunately, 0 is taken by flat.
+	slightly reduced function calls in coloring.
+	new include: shaders
+	fixed possible list crash
+	fixed boob shadow not removed
+	fixed can't change eyeColor
+	fixed loss of transparency bug
+	replaced duplicate code in screenshot too.
+	replaced lengthy colorcharacter part by said shader functions
+	added a set of shader related functions
+	removed any further annoying bitmaps (except buttons, and a few useful ones)
+	not dragging boob masks (same bug)
+	FIXED UNCOLORED BODIES (camouflaged test code is pretty damn dangerous)
+	made it so that the viewer doesn't wait for shading to display
+	removed the ugly more/less-boob/cock system
+	new event-based note system
+	commented and moved addChars functions
+	made character class functional, still a lot of bugs, and features to translate.
+	shaderjob instead of applyshader (performance)
+	optimized cycle a bit
+	removed any skip from the dictionary
+		translators are now used instead
+		removed from find parts and test class as well
+	lips nipples and dickheads in furry mode are interpolated with fur color.
+		aka: ugly furry lips bug
+	added skin tone: black
+	solved crash when switching GUI
+	fixed color picker crash
+	commented every functions at the exception of char related
+	Seperated every include possible
+	Lowered goog girl creation lag
+	JSON dictionaries, a huge step forward
+	added FlashDevelop Project
+	fixed item mask
+	changed getChildAt(1) by getChildByName for the mask layer
+	added main argument to getPart adn getPartInd, allow cycling even when NPC are present.
+	loadfromdefault crash
+	Tits picker width
+	coc picker width
+	added multiple arm pos support
+	screencap goo-girls high-res
+	change mask res to match size
+		bitmap mask for googirls is always size 2.0 * 1.0 * height
+	still goo-girl everywhere
+	Can't change CoC eye color
+	fixed cycling not updating mask;
+	separated drawParent and charParent
+	fixed toggling with new intermediary parent
+	fixed sliding sending you 3 feet under
+	goobody
+		moved every single char parts to a children
+		second movieclip serve as mask, with a special blendmode filter
+			second movieclip contains a transparent bitmap
+			transparent bitmap is created with AlphaShader
+			blending is basically output.rgba = input1.rgb, input1.a * input2.a
+		
+		every movieclip except one will be removed in case of recoloring
+		one and main are cached as bitmap to avoid, respectively, weird marks and black background;
+		surprisingly good performance during, slow to start.
+		very pretty results
+		memory heavy due to caching and non-recycling
+		
+		dead ends:
+			masking, because awful lag, and mouse-event problem
+			simple shader, because scaling didn't scale the shader, resulting in uneven result depending on size
+				had different ways in mind to give the width to the shader
+					(0; 0) pixel coding, erased by shader
+					shader "scans" body, and compare to normal width
+
+	fixed screencap width
+	NPC list reset bug
+	solved zoom crash
+	goo body shader
+	removed scrollrect because unoptimized for shading
+	fixed combobox crash
+	convert TiTS assets back from bitmap
+	fixed goo everywhere
+	gooey alpha
+	fixed crollbar height
+	converted most assets to bitmap
+	new tits color
+	fixed + 1 +1 fucking up cycling
+	EYECOLORS for TiTS
+	FIXED CRASH WHEN SCALING + DEFAULTING
+	adding npc fuck up ball sliding
+	npc height again
+	creature height
+	scalable balls better
+	size slider
+	removing npc
+	GUI tits reequilibrating
+	slider tits
+	tits butts
+	tits hips
+	slider tits
+	wrong NPC's appearing (cunt snake)
+	tits cocks
+	tits balls
+	npc height
+	aborted "None" background
+	convert stylesheets var to const
+	fixed wrong y value
+	FPS slider
+	optimize dragging /w scrollrect YEAH!
+	-Second Build
+	fixing missing heads
+	fixed cycling boobs error message
+	-Sending build to fenfen
+	AMBIANT LIGHTING
+	TiTS DICTIONARY
+	ADDED BACKGROUND FOR TiTS
+	removed useless DIC_DATA singleton
+	replace flashmode by GUIMode
+	fixed white text when switching to no-save-CoC
+	taller goblins
+	fixed NPC part dragging
+	creatures hand click
+	NEW DICTIONARY SYSTEM
+	mouse enabled hero
+	FIXED BOOB SHADOWS
+	fixed loader text
+	fixed chrome loader
+	fixed crash when no save
+	drastically reduced font sizes
+	added loading screen, yay! (still starts at 30%, butt fuck it).
+	fixed tits panels
+	fixed focus (thank god)
+	added singleton to hold focus array, and flash mode
+	added message in case fullscreen blocked
+	fixed fullscreen not working
+	temp fix for drop outside
+	finally fixed mouseleave
+	fixed mouseleave event
+	tons of scrollbar fixes, that has been waiting for too long
+	giant balls (up to 25in) not very pretty, but much more than before
+	fixed snapinterval fucking up text
+	fixed no snapinterval for cocks and boobs
+	fixed dropping creature outside zone keeping drag
+	fixed creature deletion, now powerful getbound system.
+	fixed annoying dropdown crash, and cleaned up styles.
+	NPC spawning pos more intelligent
+	fixed NPC tonote reset
+	fixed panels taking useless memory
+	gave stated to picker buttons
+	made picker have the right color since the beginning
+	added text to color picker
+	added coc styles to cpickers
+	mastered colorpickers styles
+	fixed y for dropdown and colorpicker
+	fixed mouse giving focus
+	removed focusrect for more elements
+	added colorPicker
+	removed rectskin from dropdown
+	added complete focus support. no ugly focusrect, just plain ol glowfilter goodness
+	remove useles types
+	fixed weird glitchy tall slider text
+	fixed sidearrow placement
+	changed default hair color to grey
+	made tits bar better
+	npc menu crash
+	better tonote automatic scroll down
+	fixed scrollbar crash and cellrenderers
+	fixed slider over crash
+	better boob slider entry
+	fixed one-entry dropdown being displayed
+	fixed single cock/boob crash
+	fixed charcap masking
+	added body cycle bodyghost
+	added basic boobshade drawing
+	added basic bodyshade cycle
+	fixed a bug that gave the wrong shade indexes
+	made body contain his own shade, to avoid further index issue
+	fixed wrong hair index
+	fixed first boob row not being shaded
+	made basic body shadow adding
+	made cycle transmit mask
+	added boob shadow type array
+	fixed a most of breasts being broken
+	replaced the overly complicated string system for coloring, with a much more powerful code system.
+	fixed female leg body connection
+	fixed foe menu not showing more than 10 chars
+	deleted default scrollbar types
+	added states to tits scrollbar
+	added clearAll to foe and NPCs
+	better cock randomizer
+	added fancy index setting: you can pass through multiple children if you don't touch them
+	added mousewheel index setting
+	removed doubleClick remove from charactersParent
+	fixed mainParent not appearing
+	NPCParent -> charactersParent
+	mainParent now part of NPCParent, for index purpose
+	fixed only foe being you (man that was a deep bug)
+	made scrollable lists keep track of what was added, and not, and support multiple selection
+	added scrollable NPC list, supporting theoretically infinite amount of NPCs
+	added . to a few toNotes
+	fixed not being able to drop chars on sidebars
+	added foe loading
+	replaced CREW by NPC
+	addCocks now add them at random order;
+	more and more combobox tweakings
+	removed style track to use a part of the DIC_Slider thingy, because I grew tired of that shit. We now have a real min and max
+	added on remove to slider
+	set snap interval to slide on smaller intervals
+	nipple reduce when boob grow, but not when boob shrink
+	fixed double nipple when activating nipple size transmission, nipple now transmite when cycling breast
+	slightly better ball scaling
+	made ear autoCycle to fit hair
+	made scrollbar fit into bg
+	reduced cocks>3 artifacts
+	reworked main scrollbar, lee glitchy
+	finished both dropdow, custom scrollbars, basically perfect.
+	completely redone both dropdown boxes, and their classes. Fixed a whole lot of glitches and ugly stuff.
+	fixed shuffle eyes after cycling
+	fixed phantom face for malehumanhead
+	i think this made me physically ill.
+	5 HOURS RETRYING THE SAME BULLSHIT I DID BEFORE BUT GOOD.
+	5 HOURS TRYING TO USE DUMB SHIT
+	5 HOURS TO UNDERSTANDING SHIT
+	5 HOURS TRYING BULLSHIT
+	IM SUCH A FUCKING BOSS
+	FINISHED MATHEMATICAL SHADING DEDUCTION
+	etc...
+	skinTone -> skinColor
+	other shade -> bitsshade
+	otherbits -> bitscolor
+	fixed wrong index for charres, definityvly
+	fixed create crash
+	removed none feature
+	tweaked rotrange form for dicks
+	fixed funny dick coloring when loading chars
+	more tits dropdown tweaks
+	fixed dropdown box sliding 
+	readded AA for buttons
+	TiTS dropdown tweaks
+	added cell renderer styles to dropdown
+	fixed dropdown font size
+	replaced "NPC" with "creature"
+	tweaked scrollbar height and y
+	tweaked sliders a lot, now a lot better
+	fixed slider res reset value too low
+	fixed slider res beneath button
+	fixed sliderbar thumb not buttonmode
+	fixed sliderbar not dispatching when clicking bar
+	fixed scrollbar hiding thingy 
+	style manager instead of stupid bullshit, so easier
+	added stagelock to prevent changing player when drawing bitmap
+	made reset refresh saves
+	added dynamic, real time resolution display
+	fixedcoc dropdown crash
+	mixed reso control with button
+	added resolution control for char cap
+	changed progressbar color
+	fixed list slightly to the right
+	finished dropdown gui coding, cell renderer to finish
+	fixed crash sliders
+	fixed not remvong useless styles
+	set dropdown scale higher
+	changed panels again to make dropdown and button more visible
+	fixed toogles and change eye color targeting crew
+	fixed coc-tits button not reseting if leaving too fast
+	fixed not being able to drop on panels
+	added dropdown list GUI. No list nor textformat because bug, but working on it
+	hidden phantom scrollbar. No idea what it, or how it's added.
+	new beautiful slider thumb
+	fixed wrong scrollbar thumb
+	terribly annoying bug forcing me to load a previous version, and fucking a lot of stuff up, fixed
+	scrollbar GUI added
+	slider GUI added. Ugly, but it works very well.
+	added support for setStyle
+	fixed pale white
+	fixed no cocks for tits chars
+	removed crew pos delete
+	reworked crew positioning system
+	crew members now unique
+	fixed butt cycling
+	fixed crew deletion by dragging, fucked up goblins, will be hard to find a good way to do it
+	fixed crew menu too low
+	fixed not loading crew
+	added loading crew members!
+	seperated menu updating from loading
+	separated completely drawing from loading
+	fixed typos and such, it works!
+	made initGUI prettier by seperation the 3 menu arrays
+	seperated titsmenu and cocmenu, so it doesn't bite me back later. Both menus are now 100% independant.
+	fixed tits char not having vags
+	finished nippples! Yes!
+	drawChar now takes niplength in account
+	fixed nipples scaling resetting
+	fixed new breast buttons not cycling nipples
+	fixed cycling left-right instead of size
+	fixed nipples not cycling
+	removed setX, and used regExp instead
+	fixed cycle needing parts to be in drawParent
+	added nip cycling
+	made list creationg simple, and support multip part cycling (nip1 and nip2) worked on the first try, yay!
+	fixed balls background
+	cycling boobs keep nipples color, yay! Not very pretty, and will maybe have to rework cycle to automatize stuff, but it's working fine.
+	nipples now part of boob part, but can be cycled internally. Forced me to add an exception to cycle, but avoid complex positioning and scaling system
+	repositioned and rescaled every damn nipple
+	placed every nipple on every breast ugh
+	added loadTiTS YAY!
+	added loadFromDefault for consistency
+	fixed no back button for tits background
+	added anti-alias to notes
+	finished tits panels
+	removed obsolete empty coloring parts
+	changed export name to DIC
+	locking charcap and backcap at same time because they are pretty ugly alone
+	tts notes a lil bit prettier
+	instead of changing existing buttons, recreate them altogether
+	gave parent to basic button
+	fixed arrows not changing type when executing a function telling them to
+	added framLock 
+	removed requirement for a parameter saving button text
+	made entire loading sequence a lot more pretty, now time to solve all the shit I broken
+	removed technical from drawchar
+	clarified loadgame, load black, load main char, etc. Now "load -> add -> draw" with load varying from loading mode
+	finished most part and functions of tits GUI
+	finished fixing arrow directions
+	maybe fixed tits font (didlelidondone)
+	fixed tits arrow wrong orientation
+	fixed tits arrow wrong mode
+	made tits panels a bit better
+	fixed tits arrow too bright
+	fixed back button
+	integrated tits arrows
+	fixed tits-coc button not switching text
+	fixed notes title AA
+	fixed "dic character viewer" not having right font+color
+	fixed reseting bugging background
+	removed note border
+	btn parents now independent from panels, which were grouped
+	fixed notes not switching
+	fixed buttons not switching
+	fixed switching fucking up locking
+	added border to notes
+	added basic tit coc switching
+	separated CoC and TiTS, named common parts DIC (short for dictionary, play on word)
+	added nipples colors
+	added nipples basic drawing
+	added nipples to library. very tough
+	testing texture
+	fixed boyhair
+	changing 9slice doesn't fix box issue. Weird.
+	fixed earHair too short
+	fixed male head
+	FIXED EVERY SINGLE DICK HEAD
+	auto-capital dropdown box
+	added semi-covered ear. Cycling can be better
+	loading not resetting correctly characters, nor setting skin colour.
+	loading should be fixed, but it does weird stuff
+	fixed memory issue with cap
+	added click animation to arrow button
+	fixed balls shadow glitchy
+	finished ball scaling. can be better
+	fixed cock menu not appearing
+	fixed fox tail so big it bugged size managing
+	sorted the data alphabetically
+	made the data object sent to dropdown a lot more prettier.
+	"fixed" shiny black
+	fixed dropdown list loosing event
+	changed menu arrays to object for easier adding and menu updataing
+	better off button
+	finally fixed damn 9slice scaling. Morality, NO SYMBOLS IN THE SCALE PART. Thanks to this shit I had to have a nested scaled part, and I hate this.
+	which fixed boob sliding
+	fixed passing wrong rotation when cycling
+	fixed hand not cycling with body
+	fixed useless add event listener
+	fixed temporary more cock index fix
+	fixed click animation (now "on down -> on up" rather than weird stuff)
+	fixed addInfo reseting
+	fixed flat lower boob
+	remade knife. not very good, but presentable
+	made hear a little better
+	fixed boobA lining
+	fixed bald head line
+	fixed button animation
+	fixed over event
+	fixed only 3 boobs to add intead of 4
+	fixed cock cycling rotation
+	Temporary dick index fix for create
+	Fixed toNote not adding correctly
+	FINISHED BOOBS AND COCK ADDING THIS IS A WONDERFUL WORL. Just kidding I spent so much time hating it I just can't forgive.
+	fixed clicking while dragging
+	added boob and cock selection highlights
+	set button 9-slice scaling
+	fixed ball 8 movie clip
+	fixed eyes changing color for no reason
+	made cat tail thinner
+	which fixed tail coloring
+	removed the colorgroup system, for more flexability
+	fixed dragging body parts AGAIN
+	added over and out btn Animation
+	fixed hair loosing color when cycling
+	modified cock MC ref point
+	made clit and balls normal arrays
+	fixed clit base skin
+	completely remade the cock rotation system, not exactly as good as expected, but nice
+	allowed bigger boob size for rating 100
+	made the data slider change system more elegant, with array containing all the info I need instead of guessing it
+	added boob and cock scaling max values
+	fixed dick base
+	fixed tail cycling
+	fixed scollbar 9-slice scaling (that sjit is good)
+	fixed cycling back over max
+	fixed charcap clipping (masking be bitchin')
+	fixed wrong boob scaling
+	fixed create doesn't open
+	fixed rainbow clit
+	"novag, femalevag, malevag" becomes "nofemalevag, nomalevag, femalevag, malevag" for multi cycling purpose;
+	merged coc-arrow and coc-updown
+	added 9-slice scaling to the button instead of various frames
+	removed all button specific event listeners, with the exception of the dropwdown list. Should help the garbage collector.
+	reworked button system to add hover and down animation
+	buttonMode instead of event
+	more toggles for normal player
+	IT JUST FEELS SO RIGHT
+	OH MY GOD THIS IS BEAUTIFUL
+	SERIOUSLY, WE CAN MAKE AN EDITOR WITHOUT A SINGLE GLITCH
+	FUCK YES MULTIPLE PART CYCLING THIS IS AWESOME
+	added note for everything
+	added loadMenu menu note support. Gonna try to note each and every single one of them
+	skinType now a dropdown box 
+	removed useless trace();
+	added NPC and cycling notes
+	added colorPart to shorten cycle and avoid redundancy
+	modified lake to give better perspective
+	fixed drawing crash
+	fixed scaling crash
+	balls not appearing was due to ", skinType" being erased.
+	finished cleaning library
+	opening sliders when no big parts causes crash
+	over last boobs even if Z
+	wrong bodytype
+	actual name for label for dropdown
+		Did the guy even understood events?
+	used currentTarget to avoid confusion
+	bettered event to handle nested events
+	added clear all to equipment
+	added equipment support
+	added a scale function
+	organized accesories functions
+	added a remove function
+	dick resizing crash
+	slider function added
+	shading force option
+	redone background system
+	remade menu elements adding
+	fixed menu parents
+	dropDown above slider
+	recreate boob slider
+	ball slide don't show up
+	optimized object dragging system
+	no back button for slider
+	werid event cock slide
+	fixed big cock ary
+	normal background button
+	multiple cock scalings
+	clit skin to pretty things up
+	clit scaling
+	clit adding
+	slider keep feet same x and y
+	cycling boobs
+	cycling dicks
+	no arrow bug
+	dick overlaping
+	dick-boob indexes
+	additem masking
+	additem proper index
+	additem proper scaling
+	additem proper event system
+	additem delete position
+	additem delete all
+	fixed screencap scaling
+	locking unusable buttons
+	cycling balls
+	cycling	clit
+	fixed repetitive firing of the charCap function bloating memory
+	correct sizes and scaling
+	charcap-backcap
+	screencap
+	fixed characterParent Placement
+	create: on opening file crash
+	slider code
+	rewriting menu
+	real back button
+	rewrite dictionary
+	rewrite drawing
+	rewrite color
+	rewrite background
+	setskintone setskinshade account parts tone and shade
+	fix additional flat nipples
+	dynamic sliders
+	better textbox
+	deactivated addremove btns
+	dropdown menu not working
+	name boob and morecock correctly
+	reset not resetting curY ect... for multicock
+	reset not reseting player name (Mari problem)
+	two sizes of buttons
+	UI slider
+	scrollbar not in place dropdown
+	better tween
+	cache as bitmap
+	scrollbar invisble when not needed
+	cycle cock type button
+	fix additional cocks boobs
+	boobs not cycling correctly
+	hand cursor
+	deletion possible message
+	ugly addremovebtns
+	ugly btns
+	reset not reseting all buttons
+	flat nipples not shaded	
