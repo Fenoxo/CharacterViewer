@@ -5,7 +5,7 @@
  * @param	The menu to load.
  * @param	If the character is loaded of created.
  */
-public function addMainChar():void
+private function addMainChar():void
 {
 	reset();
 	mainChar = new Character();
@@ -24,7 +24,7 @@ public function addMainChar():void
  * Should ultimately use an ID system, like the LoadGame function.
  * @param	The save object of the NPC.
  */
-public function addNPCChar(NPC:Object):void
+private function addNPCChar(NPC:Object):void
 {
 	loadTiTSSave(NPC);
 	
@@ -43,7 +43,7 @@ public function addNPCChar(NPC:Object):void
  * Removes an NPC char given it's data.
  * @param	The save object of the NPC.
  */
-public function removeNPCChar(NPC:Object)
+private function removeNPCChar(NPC:Object)
 {
 	var name:String = NPC.short;
 	var char:Character = charactersParent.getChildByName(name) as Character;
@@ -55,7 +55,7 @@ public function removeNPCChar(NPC:Object)
  * Sets the selected indexes of the foe and NPC selectbox to an empty array.
  * This triggers the update systems, and delete every characters.
  */
-public function clearChars():void
+private function clearChars():void
 {	
 	var NPCList:ViewerScroll = menus.TiTSNPCMenu.getChildByName("0");
 	var foeList:ViewerScroll = menus.TiTSFoeMenu.getChildByName("0");
@@ -72,7 +72,7 @@ public function clearChars():void
  * efficient at all.
  * @param	creatureClass
  */
-public function addCreature(creatureClass:Class)
+private function addCreature(creatureClass:Class)
 {
 	var creature:MovieClip = viewerData.partPool.getNew(creatureClass);
 	creaturesParent.addChild(creature);
@@ -102,7 +102,7 @@ public function addCreature(creatureClass:Class)
 /**
  * Clears everything in the creaturesParent object.
  */
-public function clearCreatures():void
+private function clearCreatures():void
 {
 	creaturesParent.removeChildren();
 }

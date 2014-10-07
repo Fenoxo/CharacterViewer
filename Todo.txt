@@ -1,3 +1,7 @@
+	//Code
+		lips colors (easy, just duplicate current eye colors)
+		nipple colors (create color array class I suppose, containing shade dict, tint dict, dark dict, and a few functions)
+	
 	//Bug
 	B	mask clipping, as always
 			setting every single part to cached solves it, but still ugly.
@@ -57,6 +61,7 @@
 	loader class
 	remove singleton
 //Viewer polish
+	lip coloration.
 	cycle musculature.
 	random weapon and weapon loading (depending on save).
 	find a better center-weighted random algorithm
@@ -92,6 +97,13 @@
 	chain menu opening thingy?
 	reshade only part of shading
 //Done
+	converted style array var to const
+	shortened addCocks
+	removed "definedLenght" and "boobMask" from addBoobs
+	fixed previous push, srsly
+	removed old fontnames variable from DIC
+	changed every fields to private inside DIC
+	added clean arg function to button constructor
 	changed tits NPC loading to a cleaner version
 	removed old //!!!
 	removed debug traces

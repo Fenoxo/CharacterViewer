@@ -11,7 +11,7 @@ package classes.components
 	 */
 	internal class ViewerSelectStyles 
 	{
-		public static var CoC_selectStyle:Array = [
+		public static const CoC_selectStyle:Array = [
 			"buttonWidth", 0,
 			
 			"skin", CoC_List_skin,
@@ -48,7 +48,7 @@ package classes.components
 			"downArrowDisabledSkin", Sprite
 		];
 		
-		public static var TiTS_selectStyle:Array = [
+		public static const TiTS_selectStyle:Array = [
 			"buttonWidth", 6,
 			
 			"skin", TiTS_List_skin,

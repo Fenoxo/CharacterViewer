@@ -6,7 +6,7 @@
  * A high-res shader will be recreated if needed, to avoid pixelated goo-girls.
  * @param	btnName
  */
-public function characterCap():void
+private function characterCap():void
 {
 	lockScreenshot();
 	
@@ -35,7 +35,7 @@ public function characterCap():void
  * The pictures are encoded asynchronously to avoid chrashes.
  * @param	btnName
  */
-public function backgroundCap():void
+private function backgroundCap():void
 {
 	lockScreenshot();
 	var matrix = new Matrix(1,0,0,1,-200,0);
@@ -50,7 +50,7 @@ public function backgroundCap():void
  * Triggered after a successfull PNG encoding.
  * @param	Event
  */
-public function saveCap(event:Event):void
+private function saveCap(event:Event):void
 {
 	PNGEncoder.removeEventListener(Event.COMPLETE, saveCap);
 	try

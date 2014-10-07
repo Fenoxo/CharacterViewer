@@ -33,12 +33,12 @@ package classes.utils
 		 * @param	Source object.
 		 * @return	Cloned object.
 		 */
-		public static function cloneObject(object:Object):Object
+		public static function cloneObject(target:Object):Object
 		{
 			var byte:ByteArray = new ByteArray();
 			var clone:Object = new Object();
 			
-			byte.writeObject(object);
+			byte.writeObject(target);
 			byte.position = 0;
 			clone = byte.readObject();
 			return (clone);

@@ -181,16 +181,11 @@
 				foundPart.MC.rotation = (Math.random() * rotationRange + minRotation);
 				foundPart.x = -foundPart.MC.rotation / 10;
 				
-				if (u != 9)
-				{
-					foundPart.MC.scaleX = 1.0 - Math.abs(i - (cockNum / 2)) / 20;
-					foundPart.MC.scaleY = 1.0 + (foundPart.MC.rotation - minRotation) / (10 * rotationRange);
-				}
-				else
-				{
-					foundPart.MC.scaleX = 1.0;
-					foundPart.MC.scaleY = 1.0;
-				}
+				var scaX:Number = 1.0 - Math.abs(i - (cockNum / 2)) / 20;
+				var scaY:Number = 1.0 + (foundPart.MC.rotation - minRotation) / (10 * rotationRange);
+				
+				foundPart.MC.scaleX = (u == 9) ? 1.0 : scaX;
+				foundPart.MC.scaleY = (u == 9) ? 1.0 : scaY;
 			}
 			
 			for (i; i < 10; i++)
@@ -214,9 +209,7 @@
 		private function addBoobs():void
 		{
 			var nipLen:int = lim(player.nippleLength * 4, 0, 7);
-			var definedLength:int = player.breastRows.length;
 			var boob:MovieClip;
-			var boobMask:MovieClip;
 			var foundPart:MovieClip;
 			var u:int;
 			for (var n:int = 3; n >= 0; n--)

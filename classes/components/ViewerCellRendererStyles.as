@@ -8,7 +8,7 @@ package classes.components
 	 */
 	public class ViewerCellRendererStyles 
 	{
-		public static var CoC_rendererStyle:Array = [
+		public static const CoC_rendererStyle:Array = [
 			"embedFonts", true,
 			"upSkin", CoC_CellRenderer_upSkin,
 			"overSkin", CoC_CellRenderer_downSkin,
@@ -20,7 +20,7 @@ package classes.components
 			"selectedDisabledSkin", Sprite
 		];
 		
-		public static var TiTS_rendererStyle:Array = [
+		public static const TiTS_rendererStyle:Array = [
 			"embedFonts", true,
 			"upSkin", Sprite,
 			"overSkin", TiTS_CellRenderer_downSkin,

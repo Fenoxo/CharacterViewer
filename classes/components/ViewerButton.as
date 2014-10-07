@@ -27,12 +27,18 @@
 			this.setMode(false);
 			this.setSize(140, 36);
 			
+			cleanNullArgs();
+			
+			if (args.length > 9)
+				throw new Error("Too many arguments.");
+		}
+		
+		private function cleanNullArgs():void
+		{
 			while (args.length && args[args.length - 1] == null)
 			{
 				args.pop();
 			}
-			if (args.length > 9)
-				throw new Error("Too many arguments.");
 		}
 		
 		override protected function onClick():void

@@ -327,7 +327,6 @@
 				frontWeaponParent.addChild(weapon);
 		
 			var arms:MovieClip = painter.getPart("arms");
-			var indexes:Vector.<*> = classDict.getPartIndexes(arms);
 			
 			setPartIndexes("arms", -1, armPos, -1);
 		}

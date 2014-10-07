@@ -9,7 +9,7 @@ package classes.components
 	 */
 	internal class ViewerScrollbarStyles 
 	{	
-		public static var TiTS_scrollbarStyle:Array = [
+		public static const TiTS_scrollbarStyle:Array = [
 			"thumbIcon", Sprite,
 			"thumbUpSkin", TiTS_ScrollThumb_upSkin,
 			"thumbDownSkin", TiTS_ScrollThumb_downSkin,
@@ -31,7 +31,7 @@ package classes.components
 			"repeatInterval", 35
 		];
 		
-		public static var CoC_scrollbarStyle:Array = [
+		public static const CoC_scrollbarStyle:Array = [
 			"thumbIcon", Sprite,
 			"thumbUpSkin", CoC_ScrollThumb_upSkin,
 			"thumbDownSkin", CoC_ScrollThumb_downSkin,

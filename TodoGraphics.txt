@@ -1,0 +1,161 @@
+The priority ranges from 100 to 0, respectivelly most to least important.
+
+
+///body types
+
+°The female and male variations are necessary.
+°The fat/fit/normal variations are easier, but less important.
+°We need balls and body variations for each type. If more parts need a variation beside color, just say so.
+
+-normal 			done
+-fur				100
+-goo				50
+-scale				30
+
+///Cocks
+
+°Not the most simple, but not that complex. They all need 9 size variations though.
+
+"HumanCock"			done
+"HorseCock"			done
+"DogCock"			done
+"DemonCock"			50
+"TentacleCock"		50
+"CatCock"			50
+"LizardCock"		30
+"AnemoneCock"		30
+"KangarooCock"		20		//What does that even look like?
+"DragonCock"		50
+
+///Other faces
+
+"HumanFace"			done
+"HorseFace"			30		//tried my hand at it, comically bad result
+"DogFace"			40
+"CowFace"			30	
+"SharkFace"			30
+"NagaFace"			30
+"CatFace"			50
+"LizardFace"		30
+"BunnyFace"			50
+"KangarooFace"		10
+"SpiderFace"		30
+"FoxFace"			40
+"DragonFace"		30
+
+///Ears
+
+°Nice detail, adds a lot of variation and personality to a character.
+
+"HumanEars"			done
+"HorseEars"			70
+"DogEars"			70
+"CowEars"			70
+"ElfEars"			done
+"CatEars"			100
+"SnakeEars"			???
+"BunnyEars"			100
+"KangarooEars"		20
+"FoxEars"			60
+"DragonEars"		50
+
+///Legs
+
+°Tricky part, but they are the real bridge between human and anthro. Also, many of them are done.
+°Female and Male variations
+
+"HumanLegs"			done
+"CowLegs"			20
+"WolfPaws"			done
+"NagaTail"			10 		//would require some changes on my part, so not that enthusiastic about the idea.
+"Centaur"			10		//Same
+"DemonicHeels"		50
+"DemonFootClaws"	Done
+"BeeLegs"			20
+"GooMound"			50
+"CatPaws"			done
+"LizardClaws"		20
+"BunnyFeet"			30
+"HarpyLegs"			20
+"KangarooFeet"		10
+"SpiderLegs"		10
+"DriderLeg"			10
+"FoxPaws"			30
+"DragonClaws"		20
+
+
+///tails
+
+°pretty simple stuff, I will probably do most of it myself
+ 	
+"HorseTail" 		60
+"DogTail"			60
+"DemonTail"			done
+"CowTail"			done
+"SpiderTail"		70
+"BeeTail"			70
+"SharkTail"			50
+"CatTail"			done
+"LizardTail"		50
+"BunnyTail"			80
+"HarpyTail"			50
+"KangarooTail"		40
+"FoxTail"			done
+"DragonTail"		40
+
+///wings
+
+°The coloring part will be annoying for me, but nothing scary
+°A very peculiar part, because while they do not affect the game that much, if the player spent some time getting them, he will be disapointed not having them.
+
+"BeeWings"				20
+"LargeBeeWings"			0		//A different scaling of the previous will do
+"DemonBatWings"			40
+"LargeDemonBatWings"	0		//same
+"SharkFin"				10		//No idea how it's supposed to look
+"HarpyWings"			20		//If this is what I think it is, it will probably be an arm variant
+"SmallDragonWings"		40
+"LargeDragonWings"		0
+
+///horns
+
+°Simple stuff too, can do it on my own too
+
+"DemonicHorns"			70
+"MinotaurHorns"			60
+"DraconicLizardHorns"	60
+"DoubleDraconicHorns"	60
+"AntlerHorns"			20
+"antennae"				50
+
+///arms
+
+"Normal"				done
+"Spider"				10
+"Harpy"					20
+
+///vags
+
+done
+
+///clits
+
+done
+
+///Other Parts
+
+gills				10
+spider eyes			20
+Ovipositors			0 (spider and bee tail)
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@ import flash.utils.Dictionary;
  * Creates menu objects.
  * Add and set every GUI elements (notes, background, ...).
  */
-public function initViewer():void
+private function initViewer():void
 {
 	this.removeChildren();
 	stage.frameRate = 24;
@@ -33,7 +33,7 @@ public function initViewer():void
  * Quite heavy on memory, but allows instant switching,
  * and is much less heavy on dragging lotsa characters and stuff.
  */
-public function initBackground():void
+private function initBackground():void
 {
 	var mask:BitmapData = new BitmapData(1674, 980, true, 0x11000000);
 	var noise:BitmapData = new NoiseBitmap();
@@ -95,7 +95,7 @@ public function initBackground():void
  * Changes the background and the global ligthing.
  * @param	The background ID.
  */
-public function changeBackground(backgroundID:int):void
+private function changeBackground(backgroundID:int):void
 {
 	var backgrounds:Vector.<BitmapData> = (isTiTS) ? TiTSBackgrounds : CoCBackgrounds;
 	
@@ -109,7 +109,7 @@ public function changeBackground(backgroundID:int):void
 /**
  * Updates the panels bitmap data.
  */
-public function changePanels():void
+private function changePanels():void
 {
 	var panels:Vector.<BitmapData> = (isTiTS) ? TiTSPanels : CoCPanels;
 	
@@ -120,7 +120,7 @@ public function changePanels():void
 /**
  * Gets the color names array for dropdown boxes.
  */
-public function initMenuData():void
+private function initMenuData():void
 {
 	var array:Array = viewerData.colorDict.getColorNameDictionaries();
 	skinColorNames = array[0];
@@ -130,7 +130,7 @@ public function initMenuData():void
 /**
  * Creates the upper right TextField.
  */
-public function initNotes():void
+private function initNotes():void
 {
 	notes = new ViewerNotes();
 	notes.x = 1439;
@@ -143,7 +143,7 @@ public function initNotes():void
  * Adds the characters and creatures parents and set position, properties and listeners.
  * This is called to reset those parents, which avoids clearChildren, which can quite slow.
  */
-public function initParents():void
+private function initParents():void
 {
 	clearChars();
 	clearCreatures();
@@ -183,7 +183,7 @@ public function initParents():void
 /**
  * Adds the menu parents, sets their position, and load their children.
  */
-public function initButtons():void
+private function initButtons():void
 {
 	menu.y = 450;
 	basicBtns.x = 1424;
@@ -201,7 +201,7 @@ public function initButtons():void
  * Resets the background.
  * Locks the screenshot buttons.
  */
-public function reset():void
+private function reset():void
 {
 	if (dragTarget)
 	{
@@ -234,7 +234,7 @@ public function reset():void
  * Loads, clones and stores every save object it can find.
  * Can be called to reload said objects.
  */
-public function loadSaves():void
+private function loadSaves():void
 {
 	CoCSaves = new Vector.<Object>(9, true);
 	TiTSSaves = new Vector.<Object>(9, true);
@@ -259,7 +259,7 @@ public function loadSaves():void
  * Creates and place 9 invisible buttons inside saveBtns with loadGame as action.
  * @param	btnName
  */
-public function addSaveBtns():void
+private function addSaveBtns():void
 {
 	var button:ViewerButton;
 	
@@ -279,7 +279,7 @@ public function addSaveBtns():void
  * as visible if it exists. If it cannot find any save, will display a message
  * on the note box.
  */
-public function updateSaveBtns():void
+private function updateSaveBtns():void
 {
 	var foundSave:Boolean = false;
 	var saves:Vector.<Object> = (isTiTS) ? TiTSSaves : CoCSaves;
@@ -312,7 +312,7 @@ public function updateSaveBtns():void
  * Reloads every savefiles.
  * Maybe should cause a game reset.
  */
-public function reloadSaves():void
+private function reloadSaves():void
 {
 	loadSaves();
 	updateSaveBtns();
@@ -321,7 +321,7 @@ public function reloadSaves():void
 /**
  * Create every basic buttons (reset, create, ...). Adds special fullScreen listener.
  */
-public function addBasicBtns():void
+private function addBasicBtns():void
 {
 	addComponent(55, 340 + 26, "reloadS", new ViewerButton("Reload", reloadSaves));
 	addComponent(55, 380 + 26, "restart", new ViewerButton("Reset", reset));
@@ -352,7 +352,7 @@ public function addBasicBtns():void
 /**
  * Updates the mode of every basic buttons.
  */
-public function updateBasicBtns():void
+private function updateBasicBtns():void
 {
 	for each (var component:IViewerComponent in buttons)
 	{
@@ -366,7 +366,7 @@ public function updateBasicBtns():void
  * Locks every screenshot button.
  * Avoids people spam-clicking them, causing massive lag and bugs.
  */
-public function lockScreenshot():void
+private function lockScreenshot():void
 {
 	buttons.chrShot.enabled = false;
 	buttons.bgdShot.enabled = false;
@@ -378,7 +378,7 @@ public function lockScreenshot():void
  * If a screenshot is being encoded, silently fails, as the
  * PNGEncoder listener will unlock them on completion.
  */
-public function unlockScreenshot():void
+private function unlockScreenshot():void
 {
 	if (PNGEncoder == null)
 	{
@@ -398,7 +398,7 @@ public function unlockScreenshot():void
  * Adds the menu note to the note box.
  * @param	menuName
  */
-public function switchMenu(menuName:String = "none")
+private function switchMenu(menuName:String = "none")
 {
 	var oldMenu:Sprite = menu;
 	var newMenu:Sprite = menus[menuName];
@@ -425,7 +425,7 @@ public function switchMenu(menuName:String = "none")
  * Changes include button types, menus loaded, save location, text format and class dictionary.
  * @param	btnName
  */
-public function switchGUI(isTiTS:Boolean):void
+private function switchGUI(isTiTS:Boolean):void
 {
 	this.isTiTS = isTiTS;
 	
@@ -444,7 +444,7 @@ public function switchGUI(isTiTS:Boolean):void
  * Will then loop through each menu in each tree, and parse them as Sprites.
  * Will then add a "none" property to the menu and note lists, for default behaviour.
  */
-public function initMenus():void
+private function initMenus():void
 {
 	var key:String;
 	var CoCMenus:Object = initCoCMenu();
@@ -477,7 +477,7 @@ public function initMenus():void
  * @param	isTiTS
  * @return
  */
-public function parseMenu(menuObject:Object, isTiTS:Boolean):Sprite
+private function parseMenu(menuObject:Object, isTiTS:Boolean):Sprite
 {
 	var menuParent:Sprite = new Sprite();
 	
@@ -537,7 +537,7 @@ public function parseMenu(menuObject:Object, isTiTS:Boolean):Sprite
 /**
  * Inits the CoC menu tree data.
  */
-public function initCoCMenu():Object
+private function initCoCMenu():Object
 {
 	var menus:Object = { };
 	menus.CoCMenu = {
@@ -595,7 +595,7 @@ public function initCoCMenu():Object
 /**
  * Update the CoC menu tree data to match the current char.
  */
-public function updateCoCMenu():void
+private function updateCoCMenu():void
 {
 	getElement("CoCBackgroundMenu", 1).enabled = Boolean(player.exploredMountain);
 	getElement("CoCBackgroundMenu", 2).enabled = Boolean(player.exploredLake);
@@ -610,7 +610,7 @@ public function updateCoCMenu():void
 /**
  * Inits the TiTS menu tree data.
  */
-public function initTiTSMenu():Object
+private function initTiTSMenu():Object
 {
 	var menus:Object = { };
 	menus.TiTSMenu = {
@@ -679,7 +679,7 @@ public function initTiTSMenu():Object
 /**
  * Updates the TiTS menu tree data to match the current character.
  */
-public function updateTiTSMenu():void
+private function updateTiTSMenu():void
 {
 	updateSliders(menus.TiTSSliderMenu);
 	
@@ -690,7 +690,7 @@ public function updateTiTSMenu():void
 /**
  * Inits the creator menu tree data.
  */
-public function initCreatorMenu():Object
+private function initCreatorMenu():Object
 {
 	var menus:Object = { };
 	menus.creatorMenu = {
@@ -774,7 +774,7 @@ public function initCreatorMenu():Object
 /**
  * Updates the creator menu mode and data, to find the current char.
  */
-public function updateCreatorMenu():void
+private function updateCreatorMenu():void
 {
 	if (getElement("creatorMenu", 0).isTiTS != isTiTS)
 	{
@@ -805,7 +805,7 @@ public function updateCreatorMenu():void
  * Sets the mode of every children of a Sprite.
  * @param	menu
  */
-public function updateMenu(menu:Sprite):void
+private function updateMenu(menu:Sprite):void
 {
 	var component:IViewerComponent;
 	
@@ -821,7 +821,7 @@ public function updateMenu(menu:Sprite):void
  * Updates every sliders of one of the slider menu sprites.
  * @param	menu
  */
-public function updateSliders(menu:Sprite):void
+private function updateSliders(menu:Sprite):void
 {
 	var prop:CharacterProperties = mainChar.properties;
 	
@@ -868,7 +868,7 @@ public function updateSliders(menu:Sprite):void
  * @param	number
  * @return
  */
-public function getElement(menu:String, number:int):*
+private function getElement(menu:String, number:int):*
 {
 	return (menus[menu].getChildByName(number.toString()));
 }
@@ -879,7 +879,7 @@ public function getElement(menu:String, number:int):*
  * @param	number
  * @return
  */
-public function getMenuElement(menu:Sprite, number:int):*
+private function getMenuElement(menu:Sprite, number:int):*
 {
 	return (menu.getChildByName(number.toString()));
 }
@@ -888,7 +888,7 @@ public function getMenuElement(menu:Sprite, number:int):*
  * Runs the garbadge collector in debug mode.
  * Only used with Monster Debugger to force garbadge collection.
  */
-public function garbageCollector():void
+private function garbageCollector():void
 {
 	System.gc();
 }
@@ -897,7 +897,7 @@ public function garbageCollector():void
  * Sets a home-made loading cursor.
  * Very very buggy thanks to Adobe, will need to check up tutorial.
  */
-/*public function initMouse():void
+/*private function initMouse():void
 {
 	//http://www.techques.com/question/1-4610528/Optionally-use-Flash-10.2-cursors,-while-still-being-compatible-with-Flash-10.0
 	var data:MouseCursorData = new MouseCursorData();

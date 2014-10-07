@@ -36,7 +36,7 @@ package classes.components
 		
 		public function setCompSize(width:Number, height:Number):void
 		{
-			if (left.visible == true)
+			if (left.visible)
 			{
 				if (width < height * 2)
 					throw new Error("Cannot set a width smaller than twice the height");

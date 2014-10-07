@@ -2,7 +2,7 @@
  * Loads a character given its id.
  * @param	id
  */
-public function loadGame(id:int):void
+private function loadGame(id:int):void
 {
 	if (isTiTS) loadFromTiTSSave(id);
 	else		loadFromCoCSave(id);
@@ -11,7 +11,7 @@ public function loadGame(id:int):void
 /**
  * Loads a randomized player data.
  */
-public function loadRandom():void
+private function loadRandom():void
 {
 	if (isTiTS) loadFromTiTSRandom();
 	else		loadFromCoCRandom();
@@ -21,7 +21,7 @@ public function loadRandom():void
  * Loads the default character.
  * @param	btnName
  */
-public function loadFromDefault():void
+private function loadFromDefault():void
 {
 	loadDefault();
 	addMainChar();
@@ -34,7 +34,7 @@ public function loadFromDefault():void
  * Loads a CoC character given its id.
  * @param	id
  */
-public function loadFromCoCSave(id:int):void
+private function loadFromCoCSave(id:int):void
 {
 	var saveData:Object = CoCSaves[id];
 	
@@ -53,7 +53,7 @@ public function loadFromCoCSave(id:int):void
  * Loads a TiTS character given its id.
  * @param	id
  */
-public function loadFromTiTSSave(id:int):void
+private function loadFromTiTSSave(id:int):void
 {
 	var saveData:Object = TiTSSaves[id];
 	
@@ -75,7 +75,7 @@ public function loadFromTiTSSave(id:int):void
  * Loads NPC and Foes from a save object.
  * @param	save
  */
-public function loadTiTSSecondaries(save:Object):void
+private function loadTiTSSecondaries(save:Object):void
 {
 	for each (var item:Object in save.characters)
 	{
@@ -93,9 +93,9 @@ public function loadTiTSSecondaries(save:Object):void
 	}
 }
 
-public function isCharacterSaveValid(save:Object):Boolean
+private function isCharacterSaveValid(char:Object):Boolean
 {
-	if (ite.legFlags && (ite.legFlags.indexOf(17) != -1 || ite.legFlags.indexOf(16) != -1))
+	if (char.legFlags && (char.legFlags.indexOf(17) != -1 || char.legFlags.indexOf(16) != -1))
 	{
 		return (true);
 	}
@@ -105,7 +105,7 @@ public function isCharacterSaveValid(save:Object):Boolean
 /**
  * Loads a random CoC character
  */
-public function loadFromCoCRandom():void
+private function loadFromCoCRandom():void
 {
 	loadCoCRandom();
 	addMainChar();
@@ -117,7 +117,7 @@ public function loadFromCoCRandom():void
 /**
  * Loads a random TiTS character
  */
-public function loadFromTiTSRandom():void
+private function loadFromTiTSRandom():void
 {
 	loadTiTSRandom();
 	addMainChar();
@@ -129,7 +129,7 @@ public function loadFromTiTSRandom():void
 /**
  * Resets cocks, breasts and vaginas from a Creature object.
  */
-public function clearPlayerObject():void
+private function clearPlayerObject():void
 {
 	player.removeCock(0,player.cocks.length);
 	player.removeBreastRow(0,player.breastRows.length);
@@ -139,7 +139,7 @@ public function clearPlayerObject():void
 /**
  * Loads a default player data.
  */
-public function loadDefault():void
+private function loadDefault():void
 {
 	//player = new Creature();
 	clearPlayerObject();
@@ -209,7 +209,7 @@ public function loadDefault():void
  * @param	The save object (a SharedObject)
  * @return	Existence of the save object. Could implement more complexe save corruption detection.
  */
-public function loadCoCSave(save:Object):Boolean
+private function loadCoCSave(save:Object):Boolean
 {
 	//Initiamize loading sequence
 	if (save == null) return false;
@@ -376,7 +376,7 @@ public function loadCoCSave(save:Object):Boolean
  * @param	The save object (a SharedObject)
  * @return	Existence of the save object. Could implement more complexe save corruption detection.
  */
-public function loadTiTSSave(save:Object):Boolean
+private function loadTiTSSave(save:Object):Boolean
 {
 	if (save == null) return false;
 	
@@ -476,7 +476,7 @@ public function loadTiTSSave(save:Object):Boolean
  * @param	Upper limit.
  * @return
  */
-public function getRandInt(lower:int, upper:int):int
+private function getRandInt(lower:int, upper:int):int
 {
 	return (Math.round((lower - 0.5) + (upper  - lower + 0.5) * Math.random()));
 }
@@ -484,7 +484,7 @@ public function getRandInt(lower:int, upper:int):int
 /**
  * Loads randomized CoC player data.
  */
-public function loadCoCRandom():void
+private function loadCoCRandom():void
 {
 	var color:ColorDictionary = viewerData.colorDict;
 	
@@ -563,7 +563,7 @@ public function loadCoCRandom():void
 /**
  * Loads randomized TiTS player data.
  */
-public function loadTiTSRandom():void
+private function loadTiTSRandom():void
 {
 	var color:ColorDictionary = viewerData.colorDict;
 	
@@ -643,18 +643,18 @@ public function loadTiTSRandom():void
  * Loads a character from a .sol file. Currently not working.
  * @param	btnName
  */
-/*public function loadFromFile(btnName:String):void
+/*private function loadFromFile(btnName:String):void
  * {
 	file = new FileReference();
 	file.browse();
 	file.addEventListener(Event.SELECT, onFileSelect);
 }
-public function onFileSelect(evt:Event):void
+private function onFileSelect(evt:Event):void
 {
 	file.load();
 	file.addEventListener(Event.COMPLETE, onFileLoaded);
 }
-public function onFileLoaded(evt:Event):void
+private function onFileLoaded(evt:Event):void
 {
 	var tempFileRef:FileReference = FileReference(evt.target);
 	loader = new URLLoader();
@@ -670,7 +670,7 @@ public function onFileLoaded(evt:Event):void
 		loadFailed();
 	}
 }
-public function onDataLoaded(evt:Event):void
+private function onDataLoaded(evt:Event):void
 {
 	loader.data.position = 0;
 	var sav = loader.data.readObject();
@@ -687,7 +687,7 @@ public function onDataLoaded(evt:Event):void
 	}
 	loadFailed();
 }
-public function loadFailed(e:Event = undefined)
+private function loadFailed(e:Event = undefined)
 {
 	toNote("Save file not found or corrupted, check that it is in the same directory as the CoC.swf file.\r\rLoad from file is not available when playing directly from a website like furaffinity or fenoxo.com.", true);
 }*/

@@ -7,7 +7,7 @@ package classes.components
 	 */
 	public class ViewerScrollStyles 
 	{
-		public static var TiTS_scrollStyles:Array =
+		public static const TiTS_scrollStyles:Array =
 		[
 			"skin", TiTS_List_skin,
 			"contentPadding", 1,

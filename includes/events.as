@@ -2,7 +2,7 @@
  * The single remaining stage listeners is set here.
  * Man, it used to be such a fucking jungle.
  */
-public function initListeners():void
+private function initListeners():void
 {
 	stage.addEventListener(MouseEvent.MOUSE_UP, onDrop);
 }
@@ -11,7 +11,7 @@ public function initListeners():void
 * Returns the closest number to input that is inside the [min; max] interval.
 * Returns min if min > max.
 */
-public function lim(value:Number, min:Number, max:Number):Number
+private function lim(value:Number, min:Number, max:Number):Number
 {
 	value = Math.max(value,min);
 	value = Math.min(value,max);
@@ -22,7 +22,7 @@ public function lim(value:Number, min:Number, max:Number):Number
  * Manages NoteEvents dispatched by characters.
  * @param	NoteEvent
  */
-public function onNewNoteEvent(event:NoteEvent)
+private function onNewNoteEvent(event:NoteEvent)
 {
 	notes.toNote(event.noteText, event.isToAdd);
 }
@@ -32,7 +32,7 @@ public function onNewNoteEvent(event:NoteEvent)
  * Only works if the website allows fullscreen.
  * @param	MouseEvent
  */
-public function toggleFullScreen(event:MouseEvent):void
+private function toggleFullScreen(event:MouseEvent):void
 {
 	if (!stage.allowsFullScreen)
 	{
@@ -53,7 +53,7 @@ public function toggleFullScreen(event:MouseEvent):void
  * Triggered on ENTER_FRAME to make sure the size is alway correct.
  * @param	Event
  */
-public function onResoSlide(event:SliderEvent):void
+private function onResoSlide(event:SliderEvent):void
 {
 	capScale = event.value;
 }
@@ -62,7 +62,7 @@ public function onResoSlide(event:SliderEvent):void
  * Sets the fps to the value of the fps slider.
  * @param	Event
  */
-public function onFpsSlide(event:SliderEvent):void
+private function onFpsSlide(event:SliderEvent):void
 {
 	stage.frameRate = event.value;
 }
@@ -72,7 +72,7 @@ public function onFpsSlide(event:SliderEvent):void
  * Triggered on double click.
  * @param	MouseEvent
  */
-public function onDoubleClick(event:MouseEvent):void
+private function onDoubleClick(event:MouseEvent):void
 {
 	MCUtils.remove(event.target as Sprite);
 }
@@ -82,7 +82,7 @@ public function onDoubleClick(event:MouseEvent):void
  * Triggered on MOUSE_DOWN
  * @param	MouseEvent
  */
-public function onGrab(event:MouseEvent):void
+private function onGrab(event:MouseEvent):void
 {
 	dragTarget = event.target as Sprite;
 	Mouse.hide();
@@ -97,7 +97,7 @@ public function onGrab(event:MouseEvent):void
  * Triggered on MOUSE_UP
  * @param	MouseEvent
  */
-public function onDrop(event:MouseEvent):void
+private function onDrop(event:MouseEvent):void
 {
 	if (dragTarget)
 	{
@@ -131,7 +131,7 @@ public function onDrop(event:MouseEvent):void
  * Triggered on scroll.
  * @param	MouseEvent.
  */
-public function onWheel(event:MouseEvent):void
+private function onWheel(event:MouseEvent):void
 {
 	var tar:Character = event.target as Character;
 	var par:Sprite = tar.parent as Sprite;
@@ -159,7 +159,7 @@ public function onWheel(event:MouseEvent):void
  * @param	The data array of the selected cock.
  * @param	If there is multiple cocks to choose from.
  */
-public function cockChanger(data:Array):void
+private function cockChanger(data:Array):void
 {
 	var index:int = data[0];
 	var value:Number = data[1];
@@ -196,7 +196,7 @@ public function cockChanger(data:Array):void
  * @param	The data array of the selected row.
  * @param	If there is multiple rows to choose from.
  */
-public function boobChanger(data:Array):void
+private function boobChanger(data:Array):void
 {
 	var index:int = data[0];
 	var value:Number = data[1];
@@ -231,7 +231,7 @@ public function boobChanger(data:Array):void
  * Sets the size of a cock to the value of the cock slider.
  * @param	SliderEvent
  */
-public function onCockSlide(event:SliderEvent):void
+private function onCockSlide(event:SliderEvent):void
 {
 	MCUtils.scale(cockSliderTarget.MC, event.value / 27.0);
 	mainChar.updateShader();
@@ -241,7 +241,7 @@ public function onCockSlide(event:SliderEvent):void
  * Sets the size of a boob row to the value of the boob slider.
  * @param	SliderEvent
  */
-public function onBoobSlide(event:SliderEvent):void
+private function onBoobSlide(event:SliderEvent):void
 {
 	MCUtils.scale(boobSliderTarget.MC, event.value / 40.0 - 1.0);
 	mainChar.updateShader();
@@ -251,7 +251,7 @@ public function onBoobSlide(event:SliderEvent):void
  * Sets the ball size to the value of the balls slider.
  * @param	SliderEvent
  */
-public function onBallSlide(event:SliderEvent):void
+private function onBallSlide(event:SliderEvent):void
 {
 	var balls:MovieClip = mainChar.getPart("balls");
 	var scale:MovieClip = balls.MC as MovieClip;
@@ -263,7 +263,7 @@ public function onBallSlide(event:SliderEvent):void
  * Sets the slit size to the value of the clit slider.
  * @param	SliderEvent
  */
-public function onClitSlide(event:SliderEvent):void
+private function onClitSlide(event:SliderEvent):void
 {
 	var clit:MovieClip = mainChar.getPart("clit");
 	MCUtils.scale(clit.MC, event.value / 8.0);
@@ -274,7 +274,7 @@ public function onClitSlide(event:SliderEvent):void
  * Sets the character scaling to the value of the size slider.
  * @param	SliderEvent
  */
-public function onTallSlide(event:SliderEvent):void
+private function onTallSlide(event:SliderEvent):void
 {
 	MCUtils.scaleTargetFrom(mainChar as DisplayObject,
 							event.value / 82,
@@ -289,7 +289,7 @@ public function onTallSlide(event:SliderEvent):void
  * Triggered on any focus shift.
  * @param	FocusEvent
  */
-/*public function onFocus(event:FocusEvent):void
+/*private function onFocus(event:FocusEvent):void
 {
 	if (focusTarget)
 	{
@@ -310,7 +310,7 @@ public function onTallSlide(event:SliderEvent):void
  * Triggered on key press.
  * @param	KeyboardEvent
  */
-/*public function onKeyPressed(event:KeyboardEvent):void
+/*private function onKeyPressed(event:KeyboardEvent):void
 {
 	if (focusTarget && event.keyCode == 13)
 	{

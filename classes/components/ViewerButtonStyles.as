@@ -6,7 +6,7 @@ package classes.components
 	 */
 	internal class ViewerButtonStyles 
 	{
-		public static var TiTS_buttonStyle:Array = [
+		public static const TiTS_buttonStyle:Array = [
 			"button_upSkin", TiTS_Button_upSkin,
 			"button_downSkin", TiTS_Button_downSkin,
 			"button_overSkin", TiTS_Button_overSkin,
@@ -15,7 +15,7 @@ package classes.components
 			"button_autoRepeatRate", 100
 		];
 		
-		public static var CoC_buttonStyle:Array = [
+		public static const CoC_buttonStyle:Array = [
 			"button_upSkin", CoC_Button_upSkin,
 			"button_downSkin", CoC_Button_downSkin,
 			"button_overSkin", CoC_Button_overSkin,

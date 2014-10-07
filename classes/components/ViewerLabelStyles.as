@@ -8,13 +8,13 @@ package classes.components
 	 */
 	public class ViewerLabelStyles 
 	{
-		public static var base_labelStyle:Array = [
+		public static const base_labelStyle:Array = [
 			"label_horizontalAlign", "center",
 			"label_verticalAlign", "middle",
 			"label_fittingMode", "scale"
 		];
 		
-		public static var TiTS_labelStyle:Array = [
+		public static const TiTS_labelStyle:Array = [
 			"textFieldBase_antiAliasType", AntiAliasType.ADVANCED,
 			"textFieldBase_embedFont", false,
 			"textFieldBase_color", 0xFFFFFF,
@@ -22,7 +22,7 @@ package classes.components
 			"textFieldBase_size", 20
 		];
 		
-		public static var CoC_labelStyle:Array = [
+		public static const CoC_labelStyle:Array = [
 			"textFieldBase_antiAliasType", AntiAliasType.ADVANCED,
 			"textFieldBase_embedFont", false,
 			"textFieldBase_color", 0x000000,
